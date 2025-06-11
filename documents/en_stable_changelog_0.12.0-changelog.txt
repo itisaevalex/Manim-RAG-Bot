@@ -1,0 +1,330 @@
+Source: https://docs.manim.community/en/stable/changelog/0.12.0-changelog.html
+
+v0.12.0
+¶
+Date
+:
+November 02, 2021
+Contributors
+¶
+A total of 40 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+Anima. +
+Arcstur +
+Benjamin Hackl
+Christopher Besch
+Darylgolden
+David Yang +
+Dhananjay Goratela +
+Ethan Rooke +
+Eugene Chung +
+GameDungeon
+Gustav-Rixon +
+Jan-Hendrik Müller
+Josiah Winslow +
+Laith Bahodi
+Martmists +
+Michael Hill +
+Naveen M K
+Nick +
+NotWearingPants +
+Peeter Joot +
+Ryan McCauley
+Viicos +
+heitor +
+icedcoffeeee
+kieran-pringle +
+Виктор Виктор +
+The patches included in this release have been reviewed by
+the following contributors.
+Alex Lembcke
+Anima.
+Benjamin Hackl
+Christopher Besch
+Darylgolden
+David Yang
+Dhananjay Goratela
+Ethan Rooke
+Eugene Chung
+Gustav-Rixon
+Hugues Devimeux
+Jan-Hendrik Müller
+Jason Villanueva
+Laith Bahodi
+Mysaa
+Naveen M K
+Nick
+Oliver
+Ryan McCauley
+Viicos
+icedcoffeeee
+kieran-pringle
+Pull requests merged
+¶
+A total of 52 pull requests were merged for this release.
+Highlights
+¶
+#1812
+: Implemented logarithmic scaling for
+NumberLine
+/
+Axes
+This implements scaling bases that can be passed to the
+scaling
+keyword
+argument of
+NumberLine
+. See
+LogBase
+(for a logarithmic scale) and
+LinearBase
+(for the default scale) for more details and examples.
+#2152
+: Introduced API for scene sections via
+Scene.next_section()
+Sections divide a scene into multiple parts, resulting in multiple output videos (when using the
+--save_sections
+flag).
+The cuts between two sections are defined by the user in the
+construct()
+method.
+Each section has an optional name and type, which can be used by a plugin (
+see an example
+).
+You can skip rendering specific sections with the
+skip_animations
+keyword argument.
+Deprecated classes and functions
+¶
+#1926
+: OpenGL: changed
+submobjects
+to be a property
+#2245
+: Removed deprecated method
+get_center_point
+and parameters
+azimuth_label_scale
+,
+number_scale_value
+,
+label_scale
+,
+scale_factor
+,
+size
+,
+x_min
+,
+x_max
+,
+delta_x
+,
+y_min
+,
+y_max
+,
+delta_y
+#2187
+: Renamed
+get_graph
+and its variants to
+plot()
+#2065
+: Deprecated
+FullScreenFadeRectangle
+and
+PictureInPictureFrame
+New features
+¶
+#2025
+: Implemented
+CoordinateSystem.input_to_graph_coords()
+and fixed
+CoordinateSystem.angle_of_tangent()
+#2151
+: Added option to set the input file from a config file
+#2128
+: Added keyword arguments
+match_center
+,
+match_width
+etc. to
+Mobject.become()
+#2162
+: Implemented
+MovingCamera.auto_zoom()
+for automatically zooming onto specified mobjects
+#2236
+: Added
+skip_animations
+argument to
+Scene.next_section()
+#2196
+: Implemented
+Line3D.parallel_to()
+and
+Line3D.perpendicular_to()
+Enhancements
+¶
+#2138
+: Fixed example for
+coordinate_label()
+and added more customization for
+Matrix
+Additional keyword arguments for
+coordinate_label()
+are passed to the constructed matrix.
+Matrix
+now accepts a
+bracket_config
+keyword argument.
+#2139
+: Changed the color of
+NumberLine
+from
+LIGHT_GREY
+to
+WHITE
+#2157
+: Added
+CoordinateSystem.plot_polar_graph()
+#2243
+: Fixed wasteful recursion in
+Mobject.get_merged_array()
+#2205
+: Improved last frame output handling for the OpenGL renderer
+#2172
+: Added
+should_render
+attribute to disable rendering mobjects
+#2182
+: Changed the default width of videos in Jupyter notebooks to 60%
+Fixed bugs
+¶
+#2244
+: Fixed
+CoordinateSystem.get_area()
+when using few plot points and a boundary graph
+#2232
+: Fixed
+Graph
+stopping to update after animating additions/deletions of vertices or edges
+#2142
+: Fixed issue with duplicates in OpenGL family and added tests
+#2168
+: Fixed order of return values of
+space_ops.cartesian_to_spherical()
+#2160
+: Made projection shaders compatible with
+StreamLines
+#2140
+: Fixed passing color lists to
+Mobject.set_color()
+for the OpenGL renderer
+#2211
+: Fixed animations not respecting the specified rate function
+#2161
+: Fixed
+IndexOutOfBoundsError
+in TeX logging
+#2148
+: Fixed
+Arrow
+tip disorientation with
+Line.put_start_and_end_on()
+#2192
+: Fixed
+svg_path.string_to_numbers()
+sometimes returning strings
+#2185
+: Fixed type mismatch for height and width parameters of
+Text
+Documentation-related changes
+¶
+#2228
+: Added a new boolean operation example to the gallery
+#2239
+: Removed erroneous raw string from text tutorial
+#2184
+: Moved comments in
+VMobject
+to documentation
+#2217
+: Removed superfluous dots in documentation of
+Section
+#2215
+: Fixed typo in docstring of
+ThreeDAxes.get_z_axis_label()
+#2212
+: Fixed Documentation for Sections
+#2201
+: Fixed a typo in the documentation
+#2165
+: Added Crowdin configuration and changed source files to
+.pot
+format
+#2130
+: Transferred troubleshooting installation related snippets from Discord to the documentation
+#2176
+: Modified
+Mobject.set_default()
+example to prevent leaking across the docs
+Changes concerning the testing system
+¶
+#2197
+: Added tests for resolution flag
+#2146
+: Increased test coverage for OpenGL renderer
+Changes to our development infrastructure
+¶
+#2191
+: Removed
+add-trailing-comma
+pre-commit hook
+Code quality improvements and similar refactors
+¶
+#2136
+: Added type hints to all colors
+#2220
+: Cleanup: let
+Scene.renderer.time
+return something that makes sense
+#2222
+: Updated Classifiers in
+pyproject.toml
+: removed Python 3.6, added Python 3.9
+#2213
+: Removed redundant
+partial_movie_files
+parameter in
+SceneFileWriter.combine_to_movie()
+#2200
+: Addressed some maintenance TODOs
+Changed an
+Exception
+to
+ValueError
+Fixed
+MappingCamera.points_to_pixel_coords()
+by adding the
+mobject
+argument of the parent
+Rounded up width in
+SplitScreenCamera
+Added docstring to
+Camera.capture_mobject()
+#2194
+: Added type hints to
+utils.images
+#2171
+: Added type hints to
+utils.ipython_magic
+#2164
+: Improved readability of regular expression
+New releases
+¶
+#2247
+: Prepared new release
+v0.12.0

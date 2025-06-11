@@ -1,0 +1,86 @@
+Source: https://docs.manim.community/en/stable/faq/index.html
+
+Frequently Asked Questions
+¶
+Table of Contents
+FAQ: General Usage
+Why does Manim say that “there are no scenes inside that module”?
+No matter what code I put in my file, Manim only renders a black frame! Why?
+What are the default measurements for Manim’s scene?
+How do I find out which keyword arguments I can pass when creating a
+Mobject
+?
+Can Manim render a video with transparent background?
+I have watched a video where a creator ran command X, but it does not work for me. Why?
+When using
+Tex
+or
+MathTex
+, some letters are missing. How can I fix this?
+I want to translate some code from
+manimgl
+to
+manim
+, what do I do with
+CONFIG
+dictionaries?
+My installation does not support converting PDF to SVG, help?
+Where can I find more resources for learning Manim?
+FAQ: Getting Help
+How do I animate X? Why do I get error Y? Can someone help me?
+What should I do if nobody answers my question?
+The library does not behave as documented, or something broke in a new release. What should I do?
+I have an idea for a really cool feature that should be implemented, where should I share my idea?
+FAQ: Installation
+Why are there different versions of Manim?
+Which version should I use?
+What are the differences between Manim, ManimGL, ManimCairo? Can I tell for which version a scene was written for?
+How do I know which version of Manim I have installed?
+I am following the video guide X to install Manim, but some step fails. What do I do?
+Why does ManimPango fail to install when running
+pip
+install
+manim
+?
+I am using Windows and get the error
+X
+is
+not
+recognized
+as
+an
+internal
+or
+external
+command,
+operable
+program
+or
+batch
+file
+I have tried using Chocolatey (
+choco
+install
+manimce
+) to install Manim, but it failed!
+On Windows, when typing
+python
+or
+python3
+the Windows store is opened, can I fix this?
+I am using Anaconda and get an
+ImportError
+mentioning that some Symbol is not found.
+How can I fix the error that
+manimpango/cmanimpango.c
+could not be found when trying to install Manim?
+Where can I learn more about Manim’s internal structure?
+FAQ: OpenGL rendering
+Are there any resources on how the OpenGL renderer in the community maintained version can be used?
+I am trying to run an interactive scene with
+--renderer=opengl
+and
+Scene.interactive_embed
+, but an error (
+sqlite3.ProgrammingError
+) is raised. How can I fix this?

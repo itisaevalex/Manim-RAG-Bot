@@ -1,0 +1,9 @@
+Source: https://docs.manim.community/en/latest/reference/manim.mobject.graphing.scale.html
+
+scale
+¶
+Classes
+LinearBase
+The default scaling class.
+LogBase
+Scale for logarithmic graphs/functions.

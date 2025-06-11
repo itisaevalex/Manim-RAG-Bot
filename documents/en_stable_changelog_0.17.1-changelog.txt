@@ -1,0 +1,51 @@
+Source: https://docs.manim.community/en/stable/changelog/0.17.1-changelog.html
+
+v0.17.1
+¶
+Date
+:
+December 08, 2022
+Contributors
+¶
+A total of 5 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+Alex Lembcke
+Benjamin Hackl
+Naveen M K
+Onur Solmaz
+The patches included in this release have been reviewed by
+the following contributors.
+Benjamin Hackl
+Naveen M K
+Sparsh Goenka
+Pull requests merged
+¶
+A total of 6 pull requests were merged for this release.
+Fixed bugs
+¶
+#3061
+: Always expand file paths using
+/
+when calling LaTeX
+#3062
+: Added Unicode encoding in
+Scene.add_subcaption()
+Documentation-related changes
+¶
+#2953
+: Added documentation for lagged animations in
+animation.composition
+Code quality improvements and similar refactors
+¶
+#3064
+: Increased minimal required version of
+svgelements
+#3066
+: Increased minimal version of
+pytest
+New releases
+¶
+#3065
+: Prepared new release:
+v0.17.1

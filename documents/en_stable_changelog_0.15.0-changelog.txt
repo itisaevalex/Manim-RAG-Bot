@@ -1,0 +1,351 @@
+Source: https://docs.manim.community/en/stable/changelog/0.15.0-changelog.html
+
+v0.15.0
+¶
+Date
+:
+February 26, 2022
+Contributors
+¶
+A total of 34 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+Alex Lembcke
+AnonymoZ +
+Benjamin Hackl
+Darylgolden
+Eshaan Naga Venkata +
+Faruk D. +
+GameDungeon
+Kevin Cen +
+Laith Bahodi
+Leo Xu
+Lucas Ricci
+Marcin Serwin
+Michael McNeil Forbes +
+Mysaa
+Naveen M K
+Pierre Couy +
+Simon Ellmann +
+Tommy Chu +
+Viicos
+ad_chaos
+betafcc +
+friedkeenan
+icedcoffeeee
+vmoros +
+鹤翔万里
+The patches included in this release have been reviewed by
+the following contributors.
+Benjamin Hackl
+Christopher Besch
+Darylgolden
+Eshaan Naga Venkata
+GameDungeon
+Jan-Hendrik Müller
+Laith Bahodi
+Marcin Kurczewski
+Marcin Serwin
+Naveen M K
+Raghav Goel
+RomainJMend
+Ryan McCauley
+Tommy Chu
+ad_chaos
+betafcc
+icedcoffeeee
+Pull requests merged
+¶
+A total of 71 pull requests were merged for this release.
+Breaking changes
+¶
+#2476
+: Improved structure of the
+mobject
+module
+Arrow tips now have to be imported from
+manim.mobject.geometry.tips
+instead of
+manim.mobject.geometry
+.
+#2387
+: Refactored
+BarChart
+and made it inherit from
+Axes
+BarChart
+now inherits from
+Axes
+, allowing it to use
+Axes
+’ methods. Also improves
+BarChart
+’s configuration and ease of use.
+Added
+get_bar_labels()
+to annotate the value of each bar of a
+BarChart
+.
+Deprecated classes and functions
+¶
+#2568
+: Removed Deprecated Methods
+Removed methods and classes that were deprecated since v0.10.0 and v0.11.0
+#2457
+: Deprecated
+ShowCreationThenFadeOut
+New features
+¶
+#2442
+: Added
+media_embed
+config option to control whether media in Jupyter notebooks is embedded
+#2504
+: Added finer control over
+Scene.wait()
+being static (i.e., no updaters) or not
+Added keyword argument
+frozen_frame
+to
+Wait
+and
+Scene.wait()
+New convenience method:
+Scene.pause()
+(alias for
+Scene.wait(frozen_frame=True)
+)
+Changed default behavior for OpenGL updaters: updater functions are now not called by default when they are added
+Changed default behavior of
+Scene.should_mobjects_update()
+: made it respect the set value of
+Wait.frozen_frame
+, changed automatic determination of frozen frame state to also consider Scene updaters
+Enhancements
+¶
+#2478
+: Alternative scaling for tree graph layout
+#2565
+: Allowed passing vertex configuration keyword arguments to
+Graph.add_edges()
+#2467
+:
+MathTex
+,
+Tex
+,
+Text
+and
+MarkupText
+inherit color from their parent mobjects
+#2537
+: Added support for PySide coordinate system
+#2158
+: Added OpenGL compatibility to
+ThreeDScene.add_fixed_orientation_mobjects()
+and
+ThreeDScene.add_fixed_in_frame_mobjects()
+#2535
+: Implemented performance enhancement for
+VMobject.insert_n_curves_to_point_list()
+#2516
+: Cached view matrix for
+OpenGLCamera
+#2508
+: Improve performance for
+Mobject.become()
+#2332
+: Changed
+color
+,
+stroke_color
+and
+fill_color
+attributes to properties
+#2396
+: Fixed animations introducing or removing objects
+ShowPassingFlash
+now removes objects when the animation is finished
+Added
+introducer
+keyword argument to
+Animation
+analogous to
+remover
+Updated
+Graph
+vertex addition handling
+Fixed bugs
+¶
+#2574
+: Improved Error in
+utils.tex_file_writing
+#2580
+: Fixed
+find_intersection()
+in
+space_ops
+#2576
+: Fixed a bug with animation of removal of edges from a
+Graph
+#2556
+: Fixed showing highlighted cells when creating
+Table
+#2559
+: Fix setting line numbers in
+Text
+when using ManimPango settings
+#2557
+: Fixed logger bug in
+Camera.make_background_from_func()
+#2548
+: Fixed
+Axes
+plotting bug with logarithmic x-axis
+#1547
+: Fixed certain unicode characters in users’ paths causing issues on Windows
+#2526
+: Fixed segfault when using
+--enable_gui
+#2538
+: Fixed flickering OpenGL preview when using
+frozen_frame
+#2528
+: Fixed custom naming of gifs and added some tests
+#2487
+: Fixed
+ThreeDCamera.remove_fixed_orientation_mobjects()
+#2530
+: Use single source of truth for default text values
+#2494
+: Fixed an issue related to previewing gifs
+#2490
+: Fixed order of transformation application in
+SVGMobject
+#2357
+: Fixed
+screeninfo.get_monitors
+for MacOS
+#2444
+: Fixed
+VectorScene.add_axes()
+Documentation-related changes
+¶
+#2560
+: Refactored more docstrings in
+geometry
+#2571
+: Refactored docstrings in
+graphing
+#2569
+: Refactored docstrings in
+geometry
+#2549
+: Added a page for internals which links to our GitHub wiki
+#2458
+: Improved documentation for
+Rotate
+#2459
+: Added examples to some transform animations
+#2517
+: Added guide on profiling and improving performance
+#2518
+: Added imports to examples for
+deprecation
+decorator
+#2499
+: Improved help text for
+--write_to_movie
+#2465
+: Added documentation for
+index_labels()
+#2495
+: Updated minimal LaTeX installation instructions
+#2500
+: Added note about contributions during refactor period
+#2431
+: Changed example in
+Surface.set_fill_by_value()
+#2485
+: Fixed some typos in documentation
+#2493
+: Fixed typo in documentation for parameters of
+Square
+#2482
+: Updated Python version requirement in installation guide
+#2438
+: Removed unnecessary rotation from example
+#2468
+: Hid more private methods from the docs
+#2466
+: Fixed a typo in the documentation for plugins
+#2448
+: Improvements to the
+.pot
+files cleaning system
+#2436
+: Fixed typo and improved example in building blocks tutorial
+Changes to our development infrastructure
+¶
+#2554
+: Removed
+Remove-Item
+calls for MSYS2 Python
+#2531
+: Added a GitHub Action for automatic validation of citation metadata
+#2536
+: Upgraded version of setup-ffmpeg CI action
+#2484
+: Updated tinytex download URL
+Code quality improvements and similar refactors
+¶
+#2573
+: Moved
+value_tracker
+back inside
+mobject
+#2566
+: Removed unused livestream-related imports and functions from
+scene_file_writer
+#2524
+: Reworked
+space_ops
+#2519
+: Removed outdated comment
+#2503
+: Removed unused imports
+#2475
+: Removed setuptools dependency
+#2472
+: Removed unnecessary comment in
+simple_functions
+#2429
+: Upgraded to future-style type annotations
+#2464
+: Bump pillow from 8.4.0 to 9.0.0
+#2376
+: Updated dependencies for Python 3.10
+#2437
+: Cleaned up
+simple_functions
+Removed
+fdiv
+as in all cases where it was used, it was just doing the same thing as numpy array division.
+Replaced old implementation of the choose function with scipy’s implementation
+Use
+lru_cache
+(least recently used cache) for caching the choose function. Since it’s only used for beziers, only 2 choose k and 3 choose k will be used, hence a size of 10 should be enough.
+Removed
+clip_in_place
+in favor of
+np.clip
+Removed one use of
+clip_in_place
+that wasn’t actually doing anything
+#2439
+: Removed twitter template from scripts
+New releases
+¶
+#2547
+: Prepared new release,
+v0.15.0

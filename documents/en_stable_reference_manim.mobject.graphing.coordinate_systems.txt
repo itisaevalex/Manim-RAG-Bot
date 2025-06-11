@@ -1,0 +1,32 @@
+Source: https://docs.manim.community/en/stable/reference/manim.mobject.graphing.coordinate_systems.html
+
+coordinate_systems
+¶
+Mobjects that represent coordinate systems.
+TypeVar’s
+class
+LineType
+¶
+TypeVar
+(
+'LineType'
+,
+bound
+=
+Line
+)
+Classes
+Axes
+Creates a set of axes.
+ComplexPlane
+A
+NumberPlane
+specialized for use with complex numbers.
+CoordinateSystem
+Abstract base class for Axes and NumberPlane.
+NumberPlane
+Creates a cartesian plane with background lines.
+PolarPlane
+Creates a polar plane with background lines.
+ThreeDAxes
+A 3-dimensional set of axes.

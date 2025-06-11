@@ -1,0 +1,64 @@
+Source: https://docs.manim.community/en/latest/changelog/0.15.1-changelog.html
+
+v0.15.1
+¶
+Date
+:
+March 08, 2022
+Contributors
+¶
+A total of 9 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+Benjamin Hackl
+Nicolai Weitkemper
+Yuchen +
+ad_chaos
+The patches included in this release have been reviewed by
+the following contributors.
+Alex Lembcke
+Benjamin Hackl
+Darylgolden
+Naveen M K
+Raghav Goel
+ad_chaos
+icedcoffeeee
+Pull requests merged
+¶
+A total of 9 pull requests were merged for this release.
+Enhancements
+¶
+#2602
+: Support groups in
+TransformMatchingTex
+Fixed bugs
+¶
+#2594
+: Fixed render flow issues with introducer animations
+#2584
+: Fixed bug with invalid color type
+None
+#2587
+: Fixed bug with rendering Tex string that contain
+%
+#2593
+: Fixed bug with displaying images in Jupyter Notebooks when
+config.media_embed
+is set to
+False
+Documentation-related changes
+¶
+#2570
+: Refactored docstrings in
+coordinate_systems
+#2603
+: Reduced the number of warnings during documentation build
+Code quality improvements and similar refactors
+¶
+#2578
+: Fixed incorrect type hint for color property of
+Text
+New releases
+¶
+#2596
+: Prepared bugfix release v0.15.1

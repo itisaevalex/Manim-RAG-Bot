@@ -1,0 +1,210 @@
+Source: https://docs.manim.community/en/stable/changelog/0.14.0-changelog.html
+
+v0.14.0
+¶
+Date
+:
+January 07, 2022
+Contributors
+¶
+A total of 29 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+Benjamin Hackl
+BorisTheBrave +
+Darylgolden
+GameDungeon
+Gergely Bencsik +
+Jan-Hendrik Müller
+Jihoon +
+Kian Kasad +
+Kiran-Raj-Dev +
+Laith Bahodi
+Leo Xu +
+Marcin Serwin
+Matt Gleich +
+Naveen M K
+Steven nguyen +
+Vectozavr +
+Viicos
+citrusmunch
+netwizard22 +
+The patches included in this release have been reviewed by
+the following contributors.
+Benjamin Hackl
+BorisTheBrave
+Christopher Besch
+Darylgolden
+GameDungeon
+Gergely Bencsik
+Hugues Devimeux
+Jan-Hendrik Müller
+Kiran-Raj-Dev
+Laith Bahodi
+Leo Xu
+Lucas Ricci
+Marcin Serwin
+Naveen M K
+Raghav Goel
+Ryan McCauley
+Viicos
+icedcoffeeee
+Pull requests merged
+¶
+A total of 29 pull requests were merged for this release.
+Deprecated classes and functions
+¶
+#2390
+: Removed deprecations up to
+v0.13.0
+Removed
+get_graph
+,
+get_implicit_curve
+,
+get_derivative_graph
+,
+get_line_graph
+and
+get_parametric_curve
+in favour of their
+plot
+variants
+Removed
+FullScreenFadeRectangle
+and
+PictureInPictureFrame
+Removed
+path_arc
+parameter from
+SpinInFromNothing
+Removed
+set_submobjects
+method from
+opengl_mobject.py
+New features
+¶
+#2341
+: Update
+Text
+to use new
+ManimPango
+color setting
+Text
+class now uses color setting introduced in
+ManimPango
+0.4.0
+for color and gradient.
+#2397
+: Added
+label_constructor
+parameter for
+NumberLine
+Allows changing the class that will be used to construct
+Axes
+and
+NumberLine
+labels by default. Makes it possible to easily use
+Text
+for labels if needed.
+Enhancements
+¶
+#2383
+: Made
+Surface.set_fill_by_value()
+support gradients along different axes
+#2388
+: Added
+about_point
+keyword argument to
+ApplyMatrix
+#2395
+: Add documentation for paths functions
+#2372
+: Improved
+DashedVMobject
+DashedVMobject
+used to create stretched and uneven dashes on most plotted curves. Now the dash lengths are equalized. An option is reserved to use the old method.
+New keyword argument:
+dash_offset
+. This parameter shifts the starting point.
+Fixed bugs
+¶
+#2409
+: Fixed performance degradation by trimming empty curves from paths when calling
+VMobject.align_points()
+#2392
+: Fixed
+ZeroDivisionError
+in
+three_dimensions
+#2362
+: Fixed phi updater in
+ThreeDScene.begin_3dillusion_camera_rotation()
+Documentation-related changes
+¶
+#2415
+: Removed instructions on using and installing Docker in README
+#2414
+: Made improvements to the
+Configuration
+tutorial
+#2423
+: Changed recommendation to
+mactex-no-gui
+from
+mactex
+for macOS install
+#2407
+: Clarified docstrings of
+Mobject.animate()
+,
+Mobject.set()
+and
+Variable
+#2352
+: Added Crowdin badge
+#2371
+: Added
+dvips
+to list of required LaTeX packages on Linux
+#2403
+: Improved docstring of
+ApplyMethod
+and removed propagated
+__init__
+docstring
+#2391
+: Fixed typo in parameter name in documentation of
+NumberLine
+#2368
+: Added note in Internationalization
+Code quality improvements and similar refactors
+¶
+#2408
+: Removed various return annotations that were stifling type inference
+#2424
+: Removed
+strings.py
+#1972
+: Added support for MyPy
+#2410
+: Fixed Flake8
+#2401
+: Fixed type annotations in
+mobject.three_dimensions
+#2405
+: Removed some unused OpenGL files
+#2399
+: Fixed type annotations in
+table
+#2385
+: Made comments in quickstart tutorial more precise
+#2377
+: Fixed type hint for an argument of
+MoveAlongPath
+New releases
+¶
+#2411
+: Prepare new release,
+v0.14.0

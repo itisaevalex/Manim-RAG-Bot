@@ -1,0 +1,70 @@
+Source: https://docs.manim.community/en/latest/reference/manim.utils.config_ops.html
+
+config_ops
+¶
+Utilities that might be useful for configuration dictionaries.
+Classes
+DictAsObject
+Functions
+merge_dicts_recursively
+(
+*
+dicts
+)
+[source]
+¶
+Creates a dict whose keyset is the union of all the
+input dictionaries. The value for each key is based
+on the first dict in the list with that key.
+dicts later in the list have higher priority
+When values are dictionaries, it is applied recursively
+Parameters
+:
+dicts
+(
+dict
+[
+Any
+,
+Any
+]
+)
+Return type
+:
+dict[
+Any
+,
+Any
+]
+update_dict_recursively
+(
+current_dict
+,
+*
+others
+)
+[source]
+¶
+Parameters
+:
+current_dict
+(
+dict
+[
+Any
+,
+Any
+]
+)
+others
+(
+dict
+[
+Any
+,
+Any
+]
+)
+Return type
+:
+None

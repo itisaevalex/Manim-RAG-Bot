@@ -1,0 +1,11 @@
+Source: https://docs.manim.community/en/stable/reference/manim.animation.updaters.html
+
+updaters
+¶
+Animations and utility mobjects related to update functions.
+Modules
+¶
+mobject_update_utils
+Utility functions for continuous animation of mobjects.
+update
+Animations that update mobjects.

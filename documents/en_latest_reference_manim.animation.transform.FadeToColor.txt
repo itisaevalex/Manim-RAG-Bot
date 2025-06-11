@@ -1,0 +1,101 @@
+Source: https://docs.manim.community/en/latest/reference/manim.animation.transform.FadeToColor.html
+
+FadeToColor
+¶
+Qualified name:
+manim.animation.transform.FadeToColor
+class
+FadeToColor
+(
+mobject
+=
+None
+,
+*
+args
+,
+use_override
+=
+True
+,
+**
+kwargs
+)
+[source]
+¶
+Bases:
+ApplyMethod
+Animation that changes color of a mobject.
+Examples
+Example: FadeToColorExample
+¶
+from
+manim
+import
+*
+class
+FadeToColorExample
+(
+Scene
+):
+def
+construct
+(
+self
+):
+self
+.
+play
+(
+FadeToColor
+(
+Text
+(
+"Hello World!"
+),
+color
+=
+RED
+))
+class FadeToColorExample(Scene):
+ def construct(self):
+ self.play(FadeToColor(Text("Hello World!"), color=RED))
+Methods
+Attributes
+path_arc
+path_func
+run_time
+Parameters
+:
+mobject
+(
+Mobject
+)
+color
+(
+str
+)
+_original__init__
+(
+mobject
+,
+color
+,
+**
+kwargs
+)
+¶
+Initialize self. See help(type(self)) for accurate signature.
+Parameters
+:
+mobject
+(
+Mobject
+)
+color
+(
+str
+)
+Return type
+:
+None

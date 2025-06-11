@@ -1,0 +1,14 @@
+Source: https://docs.manim.community/en/stable/reference/manim.mobject.graphing.functions.html
+
+functions
+¶
+Mobjects representing function graphs.
+Classes
+FunctionGraph
+A
+ParametricFunction
+that spans the length of the scene by default.
+ImplicitFunction
+An implicit function.
+ParametricFunction
+A parametric curve.

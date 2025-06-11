@@ -1,0 +1,479 @@
+Source: https://docs.manim.community/en/stable/changelog/0.5.0-changelog.html
+
+v0.5.0
+¶
+Date
+:
+April 02, 2021
+Contributors
+¶
+A total of 35 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+Abel Aebker +
+Abhijith Muthyala
+AntonBallmaier +
+Aron
+Benjamin Hackl
+Bogdan Stăncescu +
+Darylgolden
+Devin Neal
+GameDungeon +
+Hugues Devimeux
+Jason Villanueva
+Kapil Sachdeva
+KingWampy
+Lionel Ray +
+Mark Miller
+Mohammad Al-Fetyani +
+Naveen M K
+Niklas Dewally +
+Oliver +
+Roopesh +
+Seb Pearce +
+aebkea +
+friedkeenan
+hydrobeam +
+kolibril13
+sparshg
+tfglynn +
+The patches included in this release have been reviewed by
+the following contributors.
+Abel Aebker
+Abhijith Muthyala
+Benjamin Hackl
+Bogdan Stăncescu
+Devin Neal
+Hugues Devimeux
+Jason Villanueva
+Kapil Sachdeva
+KingWampy
+Leo Torres
+Lionel Ray
+Mark Miller
+Mohammad Al-Fetyani
+Naveen M K
+Oliver
+Ricky Chon
+vector67
+Pull requests merged
+¶
+A total of 64 pull requests were merged for this release.
+Highlights
+¶
+#1075
+: Add OpenGL Renderer
+Adds an OpenGLRenderer, OpenGLCamera, OpenGL-enabled Mobjects, and a
+--use_opengl_renderer
+flag. When this flag is passed, you can pass the
+-p
+flag to preview animations, the
+-w
+flag to generate video, and the
+-q
+flag to specify render quality. If you don’t pass either the
+-p
+or the
+-w
+flag, nothing will happen. Scenes rendered with the OpenGL renderer must
+only
+use OpenGL-enabled Mobjects.
+Deprecated classes and functions
+¶
+#1124
+: Deprecated
+ShowCreation
+in favor of
+Create
+Deprecated
+ShowCreation
+in favor of
+Create
+across the library with the exception of the
+show_creation
+boolean variable
+vector_space_scene.py
+Added a deprecation warning in the original
+ShowCreation
+class.
+#1110
+: Deprecated SmallDot + OpenGLSmallDot
+SmallDot
+isn’t necessary and a deprecation warning will be raised. This will be removed in a future release.
+New features
+¶
+#1037
+: Added new fade and transform animations (
+TransformMatchingShapes
+,
+TransformMatchingTex
+,
+FadeTransform
+) from 3b1b/manim
+Added new Fade animation:
+FadeOutToPoint
+Added
+FadeTransform
+and
+FadeTransformPieces
+for transforming mobjects and submobjects with a fade
+Added
+TransformMatchingShapes
+and
+TransformMatchingTex
+for transforming mobjects and tex that have matching parts
+#1097
+: Added 3D Mobject
+Dot3D
+#1074
+: Added jupyter media_width option to the config
+#1107
+: Added
+Unwrite
+animation class to complement
+Write
+Added
+Unwrite
+which inherits from
+Write
+. It automatically reverses the animation of
+Write
+by passing the reversed rate function, but it also takes an additional boolean parameter
+reverse
+which, if
+False
+, renders the animation from left to right (assuming text oriented in the usual way), but if
+True
+, it renders right to left.
+#1085
+: Added
+Angle
+and
+RightAngle
+for intersecting lines
+Angle
+and
+RightAngle
+both take two lines as input. If they intersect, or share a common vertex, an angle is drawn between them. Users can customize the look of the angle and also use a dotted right angle.
+Enhancements
+¶
+#1144
+: Improved quality of GIFs
+#1157
+: Refresh triangulation on call to
+apply_points_function()
+Rotate called apply_points_function, which was previous not subclassed by OpenGLMobject - now it is. Then, the vertex normals can be updated too.
+Additionally, the old_points matrix would change after rotating, making the old points / new points test irrelevant. This is addressed with a .copy call.
+#1151
+: Added parametric function support to
+OpenGLSurface
+#1139
+: In-Code
+config[“preview”]
+Support
+#1123
+: Added caching, skipping, and user-specified background colors to the OpenGL renderer
+OpenGL play logic has been improved to support caching and skipping with
+-n
+argument ( it is now similar to Cairo play logic). A random bug was fixed in OpenGLSurface and OpenGL background color can now be changed via
+background_color
+argument.
+#1118
+: Allow passing animation arguments with .animate syntax
+Users will now be able to do things like
+obj.animate(run_time=2).method(arg)
+if they want to specify animation arguments for an individual
+.animate
+call, and can still not specify any arguments like
+obj.animate.method(arg)
+.
+Passing animation arguments is only allowed directly after
+.animate
+is accessed, if passed elsewhere then a
+ValueError
+is raised.
+#718
+: Rotating the numbers in y axis
+In Axes, the y axis will be rotated 90deg but the numbers are
+also rotated and shouldn’t be. Fixes this issue.
+#1070
+: Raise FileNotFoundError when unable to locate the .cfg file specified via
+--config_file
+Raising the error will stop script execution and let the user know that there are problems with the
+–config_file
+location instead of reverting back to the default configuration.
+Fixed bugs
+¶
+#1224
+: Fixed
+ShowIncreasingSubsets
+,
+ShowSubmobjectsOneByOne
+, and
+AddTextLetterByLetter
+#1201
+: Prevent crash on
+embed()
+for empty scenes
+#1192
+: Fixed issue when an animation is cached, manim can’t merge the partial movie files.
+#1193
+: Fixed using
+Animation
+without a child
+Mobject
+in
+AnimationGroup
+AnimationGroup
+may now take
+Animation
+objects which do not have a child
+Mobject
+, such as
+Wait
+.
+#1170
+: Fixed minor SVG parsing bugs
+#1159
+: Added support for multiple transforms in the same SVG element
+#1156
+: Fixed
+DrawBorderThenFill
+to support OpenGL and improved type hints for some functions
+Fixed a bug in
+DrawBorderThenFill
+that prevented
+Write
+animations from working with
+OpenGLVMobjects
+and slightly improved type hints for some animation functions to include
+OpenGLVMobject
+.
+#1134
+: Fixed the
+-a
+flag.
+The
+-a
+/
+--write-all
+flag was broken. When used, it would cause Manim to crash just after beginning to render the second scene.
+#1115
+: Fixed bugs in
+OpenGLMobject
+and added
+ApplyMethod
+support
+Fixed undefined variables and converted
+Mobject
+to
+OpenGLMobject
+. Also, fixed assert statement in
+ApplyMethod
+.
+#1092
+: Refactored coordinate_systems.py, fixed bugs, added
+NumberPlane
+test
+The default behavior of
+rotate()
+is to rotate about the center of
+Mobject
+.
+NumberLine
+is symmetric about the point at the number 0 only when
+|x_min|
+==
+|x_max|
+. Ideally, the rotation should coincide with
+the point at number 0 on the line.
+Added a regression test and additionally fixed some bugs introduced in
+#718
+.
+#1078
+: Removed stray print statements from
+__main__.py
+Uses rich’s print traceback instead and fixes an issue in printing the version twice when
+manim –version
+is called.
+#1086
+: Fixed broken line spacing in
+Text
+The
+line_spacing
+kwarg was missing when creating
+Text
+Mobjects; this adds it.
+#1083
+: Corrected the shape of
+Torus
+Torus
+draws a surface with an elliptical cross-section when
+minor_radius
+is different from 1. This PR ensures the cross-section is always a circle.
+Documentation-related changes
+¶
+#1217
+: Copyedited the document on testing in our documentation
+#1206
+: Added Docstrings to
+Mobject
+#1218
+: Removed BezierSpline from the example gallery
+#1219
+: Updated Dockerfile (include dependencies for building documentation), moved documentation to main README
+#1209
+: Added :ref_methods: to the manim directive
+This allows class methods to be linked in the documentation. Checkout the
+example references
+below the code to see how this is used!
+#1204
+: Added rotation example to example gallery
+#1137
+: Added GitHub Wiki pages on adding testing/documentation to Sphinx Docs
+#1114
+: Added examples for
+Ellipse
+,
+Polygon
+,
+RegularPolygon
+,
+Triangle
+and
+RoundedRectangle
+#1195
+: Removed SmallDot from example
+#1130
+: Added pre-commit to run black and flake8, updated contributing documentation accordingly
+#1138
+: Moved previous version changelogs to separate files; Added a Script to generate future changelogs
+This script quickly generates a changelog for whoever is making the release.
+#1190
+: Added note in contributing guide to read the latest version of the documentation
+#1188
+: Added sounds example to docs
+#1165
+: Added documentation for installing Manim on Colab
+#1128
+: Added examples for
+DashedLine
+,
+TangentLine
+,
+Elbow
+,
+Arrow
+,
+Vector
+,
+DoubleArrow
+#1177
+: Replace links to the latest version of the documentation to the stable version
+#1077
+: Added details to
+get_critical_point()
+#1154
+: Fixed some typing hints. (ints to floats)
+#1036
+: Added
+SurroundingRectangle
+to the example gallery
+#1103
+: Added documentation and examples for Square, Dot, Circle and Rectangle
+#1101
+: Added documentation to
+Mobject
+#1088
+: Added new svg files to documentation and imports
+In particular, SVGPathMobject, VMobjectFromPathstring, and the style_utils functions to manim’s namespace.
+#1076
+: Improve documentation for GraphScene
+Updated
+coords_to_point
+and
+point_to_coords
+under
+manim/scene/graph_scene.py
+as the dosctring of each function confusingly described the opposite of what it is supposed to do.
+Changes concerning the testing system
+¶
+#1160
+: Enable CI testing for OpenGL
+#1100
+: Rewrote test cases to use sys.executable in the command instead of “python”
+Tests would fail due to
+capture()
+not spawning a subshell in the correct environment, so when python was called, the test would be unable to find necessary packages.
+#1079
+: Removed the hardcoded value,
+manim
+, in
+test_version.py
+Changes to our development infrastructure
+¶
+#1213
+: Updated TinyTex dependencies
+#1187
+: Add CodeCov to Github Workflow
+#1166
+: CI: Use poetry’s cache dir rather than pip
+#1071
+: Enable pytest-cov based code coverage
+Include pytest-cov as a python module as part of developer dependencies
+In updating poetry to include pytest-cov, manimpango moved from version 0.2.3 to 0.2.4, and libpango1.0-dev needed to be installed in Ubuntu.
+Add to the CI workflow (
+ci.yml
+) to create and upload test coverage.
+#1073
+: Removed “one line summary” from PULL_REQUEST_TEMPLATE.md
+Code quality improvements and similar refactors
+¶
+#1167
+: Merge
+OpenGLMobject
+and
+Mobject
+#1164
+: Fixed single PEP8 style in
+cairo_renderer.py
+#1140
+: Flake8 Compat & Code Cleanup
+#1019
+: Refactored
+play()
+Removed the _**three**_ decorators of
+play()
+, in particular: caching logic and file writer logic are now included within
+play()
+(it wasn’t possible before, because
+scene.wait
+and
+scene.play
+were two different things).
+Added
+is_static_wait
+attributes to Wait. (<=> if wait is a frozen frame).
+Renamed and moved
+scene.add_static_frame
+to
+renderer.freeze_current_frame
+.
+Now when calling play without animation, it raises
+ValueError
+instead of just a warning.
+Fixed
+#874
+by modifying
+renderer.update_skipping_status
+renderer
+starts the animation with
+scene.begin_animations
+(
+scene.compile_animation_data
+used to do this)
+The run time and the time progression generation is now done in
+scene.play_internal
+although it’d make more sense that renderer processes it later.
+Added a bunch of cool tests thanks to mocks, and thanks to the new syntax
+scene.render

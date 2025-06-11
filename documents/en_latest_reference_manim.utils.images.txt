@@ -1,0 +1,99 @@
+Source: https://docs.manim.community/en/latest/reference/manim.utils.images.html
+
+images
+¶
+Image manipulation utilities.
+Functions
+change_to_rgba_array
+(
+image
+,
+dtype
+=
+'uint8'
+)
+[source]
+¶
+Converts an RGB array into RGBA with the alpha value opacity maxed.
+Parameters
+:
+image
+(
+RGBPixelArray
+)
+dtype
+(
+str
+)
+Return type
+:
+RGBPixelArray
+drag_pixels
+(
+frames
+)
+[source]
+¶
+Parameters
+:
+frames
+(
+list
+[
+array
+]
+)
+Return type
+:
+list[
+array
+]
+get_full_raster_image_path
+(
+image_file_name
+)
+[source]
+¶
+Parameters
+:
+image_file_name
+(
+str
+|
+PurePath
+)
+Return type
+:
+Path
+get_full_vector_image_path
+(
+image_file_name
+)
+[source]
+¶
+Parameters
+:
+image_file_name
+(
+str
+|
+PurePath
+)
+Return type
+:
+Path
+invert_image
+(
+image
+)
+[source]
+¶
+Parameters
+:
+image
+(
+array
+)
+Return type
+:
+<module ‘PIL.Image’ from ‘/home/docs/checkouts/readthedocs.org/user_builds/manimce/envs/latest/lib/python3.13/site-packages/PIL/Image.py’>

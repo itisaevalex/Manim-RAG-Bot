@@ -1,0 +1,18 @@
+Source: https://docs.manim.community/en/latest/reference/manim.mobject.three_d.polyhedra.html
+
+polyhedra
+¶
+General polyhedral class and platonic solids.
+Classes
+ConvexHull3D
+A convex hull for a set of points
+Dodecahedron
+A dodecahedron, one of the five platonic solids.
+Icosahedron
+An icosahedron, one of the five platonic solids.
+Octahedron
+An octahedron, one of the five platonic solids.
+Polyhedron
+An abstract polyhedra class.
+Tetrahedron
+A tetrahedron, one of the five platonic solids.

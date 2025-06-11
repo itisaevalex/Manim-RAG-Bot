@@ -1,0 +1,27 @@
+Source: https://docs.manim.community/en/latest/reference/manim.mobject.three_d.three_dimensions.html
+
+three_dimensions
+¶
+Three-dimensional mobjects.
+Classes
+Arrow3D
+An arrow made out of a cylindrical line and a conical tip.
+Cone
+A circular cone.
+Cube
+A three-dimensional cube.
+Cylinder
+A cylinder, defined by its height, radius and direction,
+Dot3D
+A spherical dot.
+Line3D
+A cylindrical line, for use in ThreeDScene.
+Prism
+A right rectangular prism (or rectangular cuboid).
+Sphere
+A three-dimensional sphere.
+Surface
+Creates a Parametric Surface using a checkerboard pattern.
+ThreeDVMobject
+Torus
+A torus.

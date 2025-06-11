@@ -1,0 +1,24 @@
+Source: https://docs.manim.community/en/latest/reference/manim.mobject.geometry.tips.html
+
+tips
+¶
+A collection of tip mobjects for use with
+TipableVMobject
+.
+Classes
+ArrowCircleFilledTip
+Circular arrow tip with filled tip.
+ArrowCircleTip
+Circular arrow tip.
+ArrowSquareFilledTip
+Square arrow tip with filled tip.
+ArrowSquareTip
+Square arrow tip.
+ArrowTip
+Base class for arrow tips.
+ArrowTriangleFilledTip
+Triangular arrow tip with filled tip.
+ArrowTriangleTip
+Triangular arrow tip.
+StealthTip
+'Stealth' fighter / kite arrow shape.

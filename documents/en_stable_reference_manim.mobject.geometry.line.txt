@@ -1,0 +1,47 @@
+Source: https://docs.manim.community/en/stable/reference/manim.mobject.geometry.line.html
+
+line
+¶
+Mobjects that are lines or variations of them.
+Type Aliases
+class
+AngleQuadrant
+¶
+tuple
+[
+Literal
+[
+-
+1
+,
+1
+],
+Literal
+[
+-
+1
+,
+1
+]]
+Classes
+Angle
+A circular arc or elbow-type mobject representing an angle of two lines.
+Arrow
+An arrow.
+DashedLine
+A dashed
+Line
+.
+DoubleArrow
+An arrow with tips on both ends.
+Elbow
+Two lines that create a right angle about each other: L-shape.
+Line
+RightAngle
+An elbow-type mobject representing a right angle between two lines.
+TangentLine
+Constructs a line tangent to a
+VMobject
+at a specific point.
+Vector
+A vector specialized for use in graphs.

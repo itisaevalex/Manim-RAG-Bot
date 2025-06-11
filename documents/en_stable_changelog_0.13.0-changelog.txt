@@ -1,0 +1,240 @@
+Source: https://docs.manim.community/en/stable/changelog/0.13.0-changelog.html
+
+v0.13.0
+¶
+Date
+:
+December 04, 2021
+Contributors
+¶
+A total of 27 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+Alex Lembcke
+Benjamin Hackl
+Christopher Besch
+Darylgolden
+Filip +
+John Ingles +
+Laith Bahodi
+Lucas Ricci +
+Marcin Serwin +
+Mysaa
+Naveen M K
+Ricky +
+Viicos
+ask09ok +
+citrusmunch +
+icedcoffeeee
+mostlyaman +
+vmiezys +
+zhujisheng +
+The patches included in this release have been reviewed by
+the following contributors.
+Alex Lembcke
+Benjamin Hackl
+Christopher Besch
+Darylgolden
+Filip
+Hugues Devimeux
+Jan-Hendrik Müller
+Laith Bahodi
+Lucas Ricci
+Naveen M K
+Oliver
+Ryan McCauley
+Viicos
+ask09ok
+icedcoffeeee
+mostlyaman
+Pull requests merged
+¶
+A total of 39 pull requests were merged for this release.
+Highlights
+¶
+#2313
+: Finalized translation process and documentation
+Deprecated classes and functions
+¶
+#2331
+: Removed deprecations up to
+v0.12.0
+Removed
+distance
+parameters from
+ThreeDCamera
+(replacement:
+focal_distance
+)
+Removed
+min_distance_to_new_point
+parameter from
+TracedPath
+Removed
+positive_space_ratio
+and
+dash_spacing
+parameters from
+DashedVMobject
+Removed
+<method>_in_place
+methods from
+mobject
+Removed
+ReconfigurableScene
+Removed
+SampleSpaceScene
+#2312
+: Replaced all occurrences of
+set_submobjects
+New features
+¶
+#2314
+: Added basic support for adding subcaptions via
+Scene.add_subcaption()
+New method
+Scene.add_subcaption()
+New keyword arguments
+subcaption
+,
+subcaption_duration
+,
+subcaption_offset
+for
+Scene.play()
+#2267
+: Implemented
+CoordinateSystem.plot_antiderivative_graph()
+Enhancements
+¶
+#2347
+: Moved
+manim_directive.py
+to
+manim.utils.docbuild
+#2340
+: Added documentation for
+animation.growing
+and improved
+SpinInFromNothing
+#2343
+: Replaced current tree layout algorithm with SageMath’s for improved layout of large trees
+#2351
+: Added missing
+**kwargs
+parameter to
+Table.add_highlighted_cell()
+#2344
+: Resized SVG logos, fit content to canvas
+Fixed bugs
+¶
+#2359
+: Resolved
+ValueError
+when calling
+manim
+cfg
+write
+#2276
+: Fixed bug with alignment of z-axis in
+ThreeDAxes
+#2325
+: Several improvements to handling of
+quality
+argument
+#2335
+: Fixed bug with zooming camera and
+PointCloud
+#2328
+: Fixed bug causing incorrect RGBA values to be passed to cairo
+#2292
+: Fixed positioning of
+Flash
+#2262
+: Fixed wrong cell coordinates with
+Table.get_cell()
+after scaling
+#2280
+: Fixed
+DecimalNumber
+color when number of displayed digits changes
+Documentation-related changes
+¶
+#2354
+: Port over docs and typings from
+mobject.py
+and
+vectorized_mobject.py
+to their OpenGL counterparts
+#2350
+: Added mention of Manim sideview extension for VS Code
+#2342
+: Removed
+get_graph()
+usage from
+Axes
+example
+#2216
+: Edited and added new sections to the quickstart tutorial
+#2279
+: Added documentation for discontinuous functions
+#2319
+: Swapped
+dotL
+and
+dotR
+in
+Mobject.interpolate()
+example
+#2230
+: Copyedited building blocks tutorial
+#2310
+: Clarified that Manim does not support Python 3.10 yet in the documentation
+#2294
+: Made documentation front page more concise and rearranged order of tutorials
+#2287
+: Replace link to old interactive notebook
+Changes concerning the testing system
+¶
+#2346
+: Made
+frames_comparsion
+decorator for frame testing a proper module of the library
+#2318
+: Added tests for
+remover
+keyword argument of
+AnimationGroup
+#2301
+: Added a test for
+ThreeDScene.add_fixed_in_frame_mobjects()
+#2274
+: Optimized some tests to reduce duration
+#2272
+: Added test for
+Broadcast
+Code quality improvements and similar refactors
+¶
+#2327
+: Corrected type hint for
+labels
+keyword argument of
+Graph
+#2329
+: Remove unintended line break in README
+#2305
+: Corrected type hint
+discontinuities
+argument for
+ParametricFunction
+#2300
+: Add contact email for PyPi
+New releases
+¶
+#2353
+: Prepare new release:
+v0.13.0
+Unclassified changes
+¶
+#2348
+: Updated translation source files

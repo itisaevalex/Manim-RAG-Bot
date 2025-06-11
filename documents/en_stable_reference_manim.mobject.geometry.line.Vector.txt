@@ -1,0 +1,292 @@
+Source: https://docs.manim.community/en/stable/reference/manim.mobject.geometry.line.Vector.html
+
+Vector
+¶
+Qualified name:
+manim.mobject.geometry.line.Vector
+class
+Vector
+(
+direction
+=
+array([1.,
+0.,
+0.])
+,
+buff
+=
+0
+,
+**
+kwargs
+)
+[source]
+¶
+Bases:
+Arrow
+A vector specialized for use in graphs.
+Caution
+Do not confuse with the
+Vector2D
+,
+Vector3D
+or
+VectorND
+type aliases,
+which are not Mobjects!
+Parameters
+:
+direction
+(
+Point2DLike
+|
+Point3DLike
+) – The direction of the arrow.
+buff
+(
+float
+) – The distance of the vector from its endpoints.
+kwargs
+(
+Any
+) – Additional arguments to be passed to
+Arrow
+Examples
+Example: VectorExample
+¶
+from
+manim
+import
+*
+class
+VectorExample
+(
+Scene
+):
+def
+construct
+(
+self
+):
+plane
+=
+NumberPlane
+()
+vector_1
+=
+Vector
+([
+1
+,
+2
+])
+vector_2
+=
+Vector
+([
+-
+5
+,
+-
+2
+])
+self
+.
+add
+(
+plane
+,
+vector_1
+,
+vector_2
+)
+class VectorExample(Scene):
+ def construct(self):
+ plane = NumberPlane()
+ vector_1 = Vector([1,2])
+ vector_2 = Vector([-5,-2])
+ self.add(plane, vector_1, vector_2)
+Methods
+coordinate_label
+Creates a label based on the coordinates of the vector.
+Attributes
+animate
+Used to animate the application of any method of
+self
+.
+animation_overrides
+color
+depth
+The depth of the mobject.
+fill_color
+If there are multiple colors (for gradient) this returns the first one
+height
+The height of the mobject.
+n_points_per_curve
+sheen_factor
+stroke_color
+width
+The width of the mobject.
+_original__init__
+(
+direction
+=
+array([1.,
+0.,
+0.])
+,
+buff
+=
+0
+,
+**
+kwargs
+)
+¶
+Initialize self. See help(type(self)) for accurate signature.
+Parameters
+:
+direction
+(
+Point2DLike
+|
+Point3DLike
+)
+buff
+(
+float
+)
+kwargs
+(
+Any
+)
+Return type
+:
+None
+coordinate_label
+(
+integer_labels
+=
+True
+,
+n_dim
+=
+2
+,
+color
+=
+None
+,
+**
+kwargs
+)
+[source]
+¶
+Creates a label based on the coordinates of the vector.
+Parameters
+:
+integer_labels
+(
+bool
+) – Whether or not to round the coordinates to integers.
+n_dim
+(
+int
+) – The number of dimensions of the vector.
+color
+(
+ParsableManimColor
+|
+None
+) – Sets the color of label, optional.
+kwargs
+(
+Any
+) – Additional arguments to be passed to
+Matrix
+.
+Returns
+:
+The label.
+Return type
+:
+Matrix
+Examples
+Example: VectorCoordinateLabel
+¶
+from
+manim
+import
+*
+class
+VectorCoordinateLabel
+(
+Scene
+):
+def
+construct
+(
+self
+):
+plane
+=
+NumberPlane
+()
+vec_1
+=
+Vector
+([
+1
+,
+2
+])
+vec_2
+=
+Vector
+([
+-
+3
+,
+-
+2
+])
+label_1
+=
+vec_1
+.
+coordinate_label
+()
+label_2
+=
+vec_2
+.
+coordinate_label
+(
+color
+=
+YELLOW
+)
+self
+.
+add
+(
+plane
+,
+vec_1
+,
+vec_2
+,
+label_1
+,
+label_2
+)
+class VectorCoordinateLabel(Scene):
+ def construct(self):
+ plane = NumberPlane()
+
+ vec_1 = Vector([1, 2])
+ vec_2 = Vector([-3, -2])
+ label_1 = vec_1.coordinate_label()
+ label_2 = vec_2.coordinate_label(color=YELLOW)
+
+ self.add(plane, vec_1, vec_2, label_1, label_2)

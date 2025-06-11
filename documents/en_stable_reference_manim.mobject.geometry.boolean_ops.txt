@@ -1,0 +1,22 @@
+Source: https://docs.manim.community/en/stable/reference/manim.mobject.geometry.boolean_ops.html
+
+boolean_ops
+¶
+Boolean operations for two-dimensional mobjects.
+Classes
+Difference
+Subtracts one
+VMobject
+from another one.
+Exclusion
+Find the XOR between two
+VMobject
+.
+Intersection
+Find the intersection of two
+VMobject
+s.
+Union
+Union of two or more
+VMobject
+s.

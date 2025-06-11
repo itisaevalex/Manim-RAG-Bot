@@ -1,0 +1,21 @@
+Source: https://docs.manim.community/en/latest/reference/manim.utils.sounds.html
+
+sounds
+¶
+Sound-related utility functions.
+Functions
+get_full_sound_file_path
+(
+sound_file_name
+)
+[source]
+¶
+Parameters
+:
+sound_file_name
+(
+StrPath
+)
+Return type
+:
+Path

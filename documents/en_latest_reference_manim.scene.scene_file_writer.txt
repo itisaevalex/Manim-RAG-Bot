@@ -1,0 +1,39 @@
+Source: https://docs.manim.community/en/latest/reference/manim.scene.scene_file_writer.html
+
+scene_file_writer
+¶
+The interface between scenes and ffmpeg.
+Classes
+SceneFileWriter
+SceneFileWriter is the object that actually writes the animations played, into video files, using FFMPEG.
+Functions
+convert_audio
+(
+input_path
+,
+output_path
+,
+codec_name
+)
+[source]
+¶
+Parameters
+:
+input_path
+(
+Path
+)
+output_path
+(
+Path
+)
+codec_name
+(
+str
+)
+to_av_frame_rate
+(
+fps
+)
+[source]
+¶

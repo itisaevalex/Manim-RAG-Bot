@@ -1,0 +1,23 @@
+Source: https://docs.manim.community/en/stable/guides/index.html
+
+Thematic Guides
+¶
+Table of Contents
+Configuration
+Command-line arguments
+The ManimConfig class
+The config files
+Order of operations
+A list of all config options
+Accessing CLI command options
+A deep dive into Manim’s internals
+Introduction
+Overview
+Preliminaries
+Mobject Initialization
+Animations and the Render Loop
+Rendering Text and Formulas
+Text Without LaTeX
+Text With LaTeX
+Adding Voiceovers to Videos
+Basic Usage

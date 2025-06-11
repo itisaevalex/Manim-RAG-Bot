@@ -1,0 +1,526 @@
+Source: https://docs.manim.community/en/latest/reference/manim.mobject.geometry.line.Line.html
+
+Line
+¶
+Qualified name:
+manim.mobject.geometry.line.Line
+class
+Line
+(
+start
+=
+array([-1.,
+0.,
+0.])
+,
+end
+=
+array([1.,
+0.,
+0.])
+,
+buff
+=
+0
+,
+path_arc
+=
+0
+,
+**
+kwargs
+)
+[source]
+¶
+Bases:
+TipableVMobject
+A straight or curved line segment between two points or mobjects.
+Parameters
+:
+start
+(
+Point3DLike
+|
+Mobject
+) – The starting point or Mobject of the line.
+end
+(
+Point3DLike
+|
+Mobject
+) – The ending point or Mobject of the line.
+buff
+(
+float
+) – The distance to shorten the line from both ends.
+path_arc
+(
+float
+) – If nonzero, the line will be curved into an arc with this angle (in radians).
+kwargs
+(
+Any
+) – Additional arguments to be passed to
+TipableVMobject
+Examples
+Example: LineExample
+¶
+from
+manim
+import
+*
+class
+LineExample
+(
+Scene
+):
+def
+construct
+(
+self
+):
+line1
+=
+Line
+(
+LEFT
+*
+2
+,
+RIGHT
+*
+2
+)
+line2
+=
+Line
+(
+LEFT
+*
+2
+,
+RIGHT
+*
+2
+,
+buff
+=
+0.5
+)
+line3
+=
+Line
+(
+LEFT
+*
+2
+,
+RIGHT
+*
+2
+,
+path_arc
+=
+PI
+/
+2
+)
+grp
+=
+VGroup
+(
+line1
+,
+line2
+,
+line3
+)
+.
+arrange
+(
+DOWN
+,
+buff
+=
+2
+)
+self
+.
+add
+(
+grp
+)
+class LineExample(Scene):
+ def construct(self):
+ line1 = Line(LEFT*2, RIGHT*2)
+ line2 = Line(LEFT*2, RIGHT*2, buff=0.5)
+ line3 = Line(LEFT*2, RIGHT*2, path_arc=PI/2)
+ grp = VGroup(line1,line2,line3).arrange(DOWN, buff=2)
+ self.add(grp)
+Methods
+generate_points
+Initializes
+points
+and therefore the shape.
+get_angle
+get_projection
+Returns the projection of a point onto a line.
+get_slope
+get_unit_vector
+get_vector
+init_points
+Initializes
+points
+and therefore the shape.
+put_start_and_end_on
+Sets starts and end coordinates of a line.
+set_angle
+set_length
+set_path_arc
+set_points_by_ends
+Sets the points of the line based on its start and end points.
+Attributes
+animate
+Used to animate the application of any method of
+self
+.
+animation_overrides
+color
+depth
+The depth of the mobject.
+fill_color
+If there are multiple colors (for gradient) this returns the first one
+height
+The height of the mobject.
+n_points_per_curve
+sheen_factor
+stroke_color
+width
+The width of the mobject.
+_original__init__
+(
+start
+=
+array([-1.,
+0.,
+0.])
+,
+end
+=
+array([1.,
+0.,
+0.])
+,
+buff
+=
+0
+,
+path_arc
+=
+0
+,
+**
+kwargs
+)
+¶
+Initialize self. See help(type(self)) for accurate signature.
+Parameters
+:
+start
+(
+Point3DLike
+|
+Mobject
+)
+end
+(
+Point3DLike
+|
+Mobject
+)
+buff
+(
+float
+)
+path_arc
+(
+float
+)
+kwargs
+(
+Any
+)
+Return type
+:
+None
+_pointify
+(
+mob_or_point
+,
+direction
+=
+None
+)
+[source]
+¶
+Transforms a mobject into its corresponding point. Does nothing if a point is passed.
+direction
+determines the location of the point along its bounding box in that direction.
+Parameters
+:
+mob_or_point
+(
+Mobject
+|
+Point3DLike
+) – The mobject or point.
+direction
+(
+Vector3D
+|
+None
+) – The direction.
+Return type
+:
+Point3D
+generate_points
+(
+)
+[source]
+¶
+Initializes
+points
+and therefore the shape.
+Gets called upon creation. This is an empty method that can be implemented by
+subclasses.
+Return type
+:
+None
+get_projection
+(
+point
+)
+[source]
+¶
+Returns the projection of a point onto a line.
+Parameters
+:
+point
+(
+Point3DLike
+) – The point to which the line is projected.
+Return type
+:
+Point3D
+init_points
+(
+)
+¶
+Initializes
+points
+and therefore the shape.
+Gets called upon creation. This is an empty method that can be implemented by
+subclasses.
+Return type
+:
+None
+put_start_and_end_on
+(
+start
+,
+end
+)
+[source]
+¶
+Sets starts and end coordinates of a line.
+Examples
+Example: LineExample
+¶
+from
+manim
+import
+*
+class
+LineExample
+(
+Scene
+):
+def
+construct
+(
+self
+):
+d
+=
+VGroup
+()
+for
+i
+in
+range
+(
+0
+,
+10
+):
+d
+.
+add
+(
+Dot
+())
+d
+.
+arrange_in_grid
+(
+buff
+=
+1
+)
+self
+.
+add
+(
+d
+)
+l
+=
+Line
+(
+d
+[
+0
+],
+d
+[
+1
+])
+self
+.
+add
+(
+l
+)
+self
+.
+wait
+()
+l
+.
+put_start_and_end_on
+(
+d
+[
+1
+]
+.
+get_center
+(),
+d
+[
+2
+]
+.
+get_center
+())
+self
+.
+wait
+()
+l
+.
+put_start_and_end_on
+(
+d
+[
+4
+]
+.
+get_center
+(),
+d
+[
+7
+]
+.
+get_center
+())
+self
+.
+wait
+()
+class LineExample(Scene):
+ def construct(self):
+ d = VGroup()
+ for i in range(0,10):
+ d.add(Dot())
+ d.arrange_in_grid(buff=1)
+ self.add(d)
+ l= Line(d[0], d[1])
+ self.add(l)
+ self.wait()
+ l.put_start_and_end_on(d[1].get_center(), d[2].get_center())
+ self.wait()
+ l.put_start_and_end_on(d[4].get_center(), d[7].get_center())
+ self.wait()
+Parameters
+:
+start
+(
+Point3DLike
+)
+end
+(
+Point3DLike
+)
+Return type
+:
+Self
+set_points_by_ends
+(
+start
+,
+end
+,
+buff
+=
+0
+,
+path_arc
+=
+0
+)
+[source]
+¶
+Sets the points of the line based on its start and end points.
+Unlike
+put_start_and_end_on()
+, this method respects
+self.buff
+and
+Mobject bounding boxes.
+Parameters
+:
+start
+(
+Point3DLike
+|
+Mobject
+) – The start point or Mobject of the line.
+end
+(
+Point3DLike
+|
+Mobject
+) – The end point or Mobject of the line.
+buff
+(
+float
+) – The empty space between the start and end of the line, by default 0.
+path_arc
+(
+float
+) – The angle of a circle spanned by this arc, by default 0 which is a straight line.
+Return type
+:
+None

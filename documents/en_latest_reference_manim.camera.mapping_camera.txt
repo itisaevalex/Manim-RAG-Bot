@@ -1,0 +1,10 @@
+Source: https://docs.manim.community/en/latest/reference/manim.camera.mapping_camera.html
+
+mapping_camera
+¶
+A camera that allows mapping between objects.
+Classes
+MappingCamera
+Camera object that allows mapping between objects.
+OldMultiCamera
+SplitScreenCamera

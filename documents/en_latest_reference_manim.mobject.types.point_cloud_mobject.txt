@@ -1,0 +1,16 @@
+Source: https://docs.manim.community/en/latest/reference/manim.mobject.types.point_cloud_mobject.html
+
+point_cloud_mobject
+¶
+Mobjects representing point clouds.
+Classes
+Mobject1D
+Mobject2D
+PGroup
+A group for several point mobjects.
+PMobject
+A disc made of a cloud of Dots
+Point
+A mobject representing a point.
+PointCloudDot
+A disc made of a cloud of dots.

@@ -1,0 +1,492 @@
+Source: https://docs.manim.community/en/stable/changelog/0.7.0-changelog.html
+
+v0.7.0
+¶
+Date
+:
+June 01, 2021
+Contributors
+¶
+A total of 45 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+André +
+Anton Ballmaier
+Benjamin Hackl
+Clar Fon
+Darylgolden
+Devin Neal
+Hugues Devimeux
+Iced-Tea3 +
+Jan-Hendrik Müller
+Jason Villanueva
+Jerónimo Squartini +
+KingWampy
+Laith Bahodi
+Max Stoumen +
+Mohammad Al-Fetyani
+Naveen M K
+NeoPlato
+Newell Jensen
+Nikhil Garuda
+Nikhil Sharma +
+PaulCMurdoch +
+Philipp Imhof
+Raghav Goel
+Robert West +
+Ryan McCauley +
+Skaft +
+SwiddisZwei +
+e4coder +
+friedkeenan
+malte-v +
+ralphieraccoon
+sparshg
+The patches included in this release have been reviewed by
+the following contributors.
+Aathish Sivasubrahmanian
+Abhijith Muthyala
+Anton Ballmaier
+Aron
+Benjamin Hackl
+Darylgolden
+Devin Neal
+GameDungeon
+Hugues Devimeux
+Iced-Tea3
+Jan-Hendrik Müller
+Jason Villanueva
+Jerónimo Squartini
+KingWampy
+Laith Bahodi
+Mark Miller
+Mohammad Al-Fetyani
+Naveen M K
+Nikhil Garuda
+Oliver
+Philipp Imhof
+Raghav Goel
+Ricky Chon
+Ryan McCauley
+Skaft
+SwiddisZwei
+e4coder
+friedkeenan
+ralphieraccoon
+sparshg
+Pull requests merged
+¶
+A total of 87 pull requests were merged for this release.
+Breaking changes
+¶
+#1521
+: Improve
+Animation
+docs
+Improve documentation of the
+Animation
+class.
+Unify the signature of
+get_all_mobjects
+. Now it always returns a sequence of
+Mobjects
+. This breaks using
+FadeTransform.get_all_mobjects
+as
+Group
+.
+#1470
+: Drop support for Python 3.6
+Manim won’t work on Python 3.6 anymore.
+Highlights
+¶
+#1447
+: Added
+PolarPlane
+for polar coordinates.
+#1490
+: Added
+Polygram
+, rework the polygon inheritance tree, and add
+Star
+Add
+Polygram
+, a generalized
+Polygon
+that allows for disconnected sets of edges.
+Make
+Polygon
+inherit from
+Polygram
+.
+Add
+regular_vertices()
+Add
+RegularPolygram
+.
+Make
+RegularPolygon
+inherit from
+RegularPolygram
+.
+Add
+Star
+.
+#1462
+: OpenGL: Added
+Shader
+,
+Mesh
+, and
+FullScreenQuad
+Add Shader and Mesh objects
+#1418
+: Added project management commands
+manim
+init
+- quickly sets up default files for a manim project.
+manim
+new
+project
+- lets the user set project settings. It also creates the project inside a new folder of name <project_name>
+manim
+new
+scene
+- used to quickly insert new scenes into files. If
+file
+name
+is not provided
+main.py
+is used as default.
+Deprecated classes and functions
+¶
+#1598
+: Update examples to use
+Axes
+and deprecate
+GraphScene
+GraphScene
+has been deprecated and its functionality has been shifted to
+Axes
+. See the updated example gallery for sample usage.
+#1454
+: Fading module enhancements
+Moved functionality of all Fading classes to
+FadeIn
+and
+FadeOut
+. All other fading classes have been deprecated.
+#1375
+: Deleted the deprecated
+ShowCreation
+in favor of
+Create
+New features
+¶
+#1566
+: Added the ability to add gridlines to a
+Rectangle
+#1548
+: Added
+ArcBrace
+, a subclass of
+Brace
+.
+#1559
+: Update VGroup to support item assignment (#1530)
+Support indexed item-assignment for VGroup
+#1518
+: Allow fading multiple Mobjects in one Animation
+#1422
+: Added
+override_animation()
+decorator
+#1504
+: Color module enhancements
+Replaced
+BLUE_E
+with what was previously
+DARK_BLUE
+and removed
+DARK_BLUE
+Added alias
+LIGHTER_GRAY
+for
+GRAY_A
+Added
+PURE_RED
+,
+PURE_BLUE
+and renamed
+GREEN_SCREEN
+to
+PURE_GREEN
+All gray colors are now also available using British spelling (including
+GREY_BROWN
+)
+Replaced color example in the docs. It can now be used as a quick reference for all color names.
+#1272
+: Implement metaclass approach in geometry module to make mobjects compatible with cairo and opengl rendering
+#1404
+: Added two deprecation decorators
+Added two function decorators
+deprecated
+and
+deprecated_params
+as a consistent way of deprecating code.
+Enhancements
+¶
+#1572
+: OpenGL compatibility via metaclass:
+TracedPath
+,
+ParametricFunction
+,
+Brace
+,
+VGroup
+#1472
+: Porting methods from
+GraphScene
+to
+CoordinateSystem
+#1589
+: OpenGL compatibility via metaclass:
+ValueTracker
+#1564
+: Add extra notes for TeX compilation errors
+Add hint to use custom
+TexTemplate
+on TeX compilation errors
+#1584
+: Added a check for
+0
+in
+round_corners()
+#1586
+: Add OpenGLMobject support to all
+isinstance
+occurrences
+This PR increases the support for OpenGL in the remaining animation classes and in other places where appropriate.
+#1577
+: Added new metaclass ConvertToOpenGL (replacing MetaVMobject), restore IntelliSense
+#1562
+: Improved VectorField’s Nudge Accuracy Per Step
+Implemented the Runge-Kutta algorithm in VectorField’s nudge function. This increases the accuracy as an object moves along a vector field. This also increases efficiency as the nudge function requires less loops to achieve accuracy than the previous implementation.
+#1480
+: Add logging info to tex errors
+#1567
+: Compatibility Fixes with ManimPango v0.3.0
+ManimPango v0.3.0+ is required for Manim now.
+Show errors from Pango when Markup isn’t correct
+#1512
+: OpenGL compatibility via metaclass: graph
+#1511
+: OpenGL compatibility via metaclass: svg_mobject, text_mobject, tex_mobject
+#1502
+: Added
+center
+parameter to
+Sphere
+and
+point
+parameter to
+Dot3D
+#1486
+: Update of
+rate_functions
+Changed the picture for the non standard rate functions.
+#1495
+: Ported value_tracker to OpenGL
+#1382
+: Expand documentation, testing, and functionality of ValueTrackers; remove ExponentialValueTracker
+Added more documentation and inline operators to ValueTracker and ComplexValueTracker. Brought coverage for value_tracker.py to 100%. Removed ExponentialValueTracker.
+#1475
+: Add SVG elliptical arc support
+Fixed bugs
+¶
+#1574
+: Fixed error when processing SVG with omitted elliptical arc command
+#1596
+: Fix indexing for non-whitespace tex arg separator
+Fixes #1568
+Fix issue when setting the arg_separator of a Tex object as a non-whitespace character(s). The method
+break_up_by_substrings(self)
+was not accounting for the separator when setting the index.
+#1588
+: Fixed multiple animations being saved in the same file
+#1571
+: Fix tests after introducing parallelization
+#1545
+: Fix outdated parameters for
+LinearTransformationScene
+and add an example + typing.
+#1513
+: Fixed rotation of gradients while rotating a VMobject
+Fixed the direction of gradient which remained the same while rotating VMobjects
+Added
+rotate_sheen_direction()
+method in VMobject
+#1570
+: Output errors to stderr
+#1560
+: Declare
+*.npz
+*.wav
+*.png
+as binary in
+.gitattributes
+#1211
+: Refactored scene caching and fixed issue when a different hash was produced when copying a mobject in the scene
+Refactored internal scene-caching mechanism and fixed bug when an inconsistent hash was produced when copying a mobject.
+#1527
+: Improved handling of substring isolation within sqrt, and fixed a bug with transform_mismatch for the matching shape transforms
+#1526
+: Fix fading
+#1523
+: Fix multiple FadeIn / Out only working on VMobjects
+Documentation-related changes
+¶
+#1599
+: Added example for
+Annulus
+#1415
+: New example for gallery and some docs refinements
+#1509
+: Copyedited Documentation
+Added a link to Manim Community GitHub page in
+for_dev.rst
+.
+Fixed
+get_start()
+and added
+roll
+link in
+building_blocks-rst
+Added language to code blocks in
+configuration.rst
+#1384
+: Added typings to space_ops.py
+Added Typehints to most of the functions
+#1500
+: Example for
+apply_complex_function()
+#1551
+: Fixed the typo for Admonitions
+#1550
+: Restructuring of Contribution Section
+#1541
+: Fixing broken links and other minor doc things
+#1516
+: Update docs to use
+t_range
+instead of
+t_min
+and
+t_max
+in
+ParametricFunction
+#1508
+: Update troubleshooting docs
+#1485
+: Added
+Title
+example for the docs
+#1439
+: Cleaning
+Sequence
+typehints
+#1440
+: Added Scoop installation docs (Windows)
+#1452
+: Refine typehints at
+Angle
+#1458
+: Refine docs of
+Text
+( add
+disable_ligatures=True
+for t2c)
+#1449
+: Added
+PointCloudDot
+example
+#1473
+: Added easy example for
+arrange_in_grid()
+#1402
+: Added typestring parser checker
+#1451
+: Reduce complexity of AngleExample
+#1441
+: Add inheritance diagrams to reference page
+Added inheritance diagrams to the reference page as a quick navigation method.
+#1457
+: Fixing broken doc links
+#1445
+: Remove $ from tutorial commands
+Changes concerning the testing system
+¶
+#1556
+: Try pytest-xdist for parallelization in tests
+Changes to our development infrastructure
+¶
+#1505
+: Add docs reference to PR template
+Added documentation link to the Pull Request Template.
+#1499
+: Updated Discord links in the docs to point towards a standardized redirect
+#1461
+: Build the docs - Logging
+#1481
+: pyproject.toml: poetry_core -> poetry-core
+#1477
+: Update RDT sphinx package to version 3.5.3
+#1460
+: Create CONTRIBUTING.md
+#1453
+: manim_directive: fix image links in docs - Windows
+Use POSIX path on Windows to link images so documentation can build locally.
+Code quality improvements and similar refactors
+¶
+#1465
+: Added typings and description to some functions in
+coordinate_systems
+.
+#1552
+: Removed unwanted parameters in geometry
+Removed
+anchors_span_full_range
+,
+close_new_points
+,
+anchors_span_full_range
+,
+preserve_tip_size_when_scaling
+,
+mark_paths_closed
+and
+close_new_points
+#1597
+: Removed hilite_me and insert_line_numbers_in_html from global name space
+#1535
+: Update dependencies and fix tests
+#1544
+: Adding spell checker as a pre-commit hook
+#1542
+: Swapping a pango markup link in docs
+#1531
+: Don’t use deprecated methods in deprecation.py
+#1492
+: Remove stray print statements introduced in #1404
+#1471
+: Fix Some Warnings from lgtm
+Changes that needed to be reverted again
+¶
+#1606
+: Bring back
+DARK_BLUE
+New releases
+¶
+#1601
+: Preparation for v0.7.0: added changelog and bumped version number

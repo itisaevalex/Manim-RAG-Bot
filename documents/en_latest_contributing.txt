@@ -1,0 +1,77 @@
+Source: https://docs.manim.community/en/latest/contributing.html
+
+Contributing
+¶
+Important
+Manim is currently undergoing a major refactor. In general,
+contributions implementing new features will not be accepted in this period.
+Other contributions unrelated to cleaning up the codebase may also take a longer
+period of time to be reviewed. This guide may quickly become outdated quickly; we
+highly recommend joining our
+Discord server
+to discuss any potential contributions and keep up to date with the latest developments.
+Thank you for your interest in contributing to Manim! However you have decided to contribute
+or interact with the community, please always be civil and respect other
+members of the community. If you haven’t read our
+code of conduct
+,
+do so here. Manim is Free and Open Source Software (FOSS) for mathematical
+animations. As such,
+we welcome everyone
+who is interested in
+mathematics, pedagogy, computer animations, open-source,
+software development, and beyond. Manim accepts many kinds of contributions,
+some are detailed below:
+Code maintenance and development
+DevOps
+Documentation
+Developing educational content & narrative documentation
+Plugins to extend Manim functionality
+Testing (graphical, unit & video)
+Website design and development
+Translating documentation and docstrings
+To get an overview of what our community is currently working on, check out
+our development project board
+.
+Note
+Please ensure that you are reading the latest version of this guide by ensuring that “latest” is selected in the version switcher.
+Contributing can be confusing, so here are a few guides:
+Manim Development Process
+For first-time contributors
+Develop your contribution
+Polishing Changes and Submitting a Pull Request
+Further useful guidelines
+Adding Documentation
+Building the documentation
+Sphinx library and extensions
+Sphinx theme
+Custom Sphinx directives
+Index
+Adding Admonitions
+Adding Docstrings
+Adding Examples
+Adding References
+Typing Conventions
+Choosing Type Hints
+Adding Tests
+How Manim tests
+How it Works
+Architecture
+The Main Directories
+Adding a New Test
+Unit Tests
+Graphical Unit Test
+Videos tests
+Improving performance
+Profiling
+Running an animation as a script
+An example: profiling with cProfile and SnakeViz
+Internationalization
+Signing up
+Contributing
+Voting
+Translations
+Translation guidelines
+Proofreading
+Errors
+Source errors

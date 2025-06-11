@@ -1,0 +1,296 @@
+Source: https://docs.manim.community/en/latest/changelog/0.2.0-changelog.html
+
+v0.2.0
+¶
+Date
+:
+January 1, 2021
+The changes since Manim Community release v0.1.1 are listed below.
+Breaking Changes
+¶
+Remove all CONFIG dictionaries and all calls to
+digest_config
+and allow
+passing options directly to the constructor of the corresponding classes (
+#783
+).
+Practically, this means that old constructions using
+CONFIG
+like:
+class
+SomeMobject
+(
+Thing
+):
+CONFIG
+=
+{
+"my_awesome_property"
+:
+42
+}
+where corresponding objects were then instantiated as
+my_mobject
+=
+SomeMobject()
+should now be created simply using
+my_mobject
+=
+SomeMobject(my_awesome_property=42)
+.
+Remove old syntax for animating mobject methods by passing the methods and arguments to
+self.play
+,
+and use a new syntax featuring the
+animate
+property (
+#881
+).
+For example: the old-style
+play
+call
+self
+.
+play
+(
+my_square
+.
+shift
+,
+LEFT
+)
+should be replaced with the new following call using the
+animate
+property:
+self
+.
+play
+(
+my_square
+.
+animate
+.
+shift
+(
+LEFT
+))
+New Features
+¶
+Added creation animation for
+ManimBanner
+(
+#814
+)
+Added some documentation to
+construct()
+(
+#753
+)
+Added a black and white monochromatic version of Manim’s logo (
+#826
+)
+Added support for a plugin system (
+manim
+plugin
+subcommand + documentation) (
+#784
+)
+Implemented
+__add__
+,
+__iadd__
+,
+__sub__
+, and
+__isub__
+for
+Mobject
+(allowing for notation like
+some_vgroup
++
+some_mobject
+) (
+#790
+)
+Added type hints to several files in the library (
+#835
+)
+Added some examples to
+creation
+(
+#820
+)
+Added some examples to
+DashedLine
+and
+CurvesAsSubmobjects
+(
+#833
+)
+Added new implementation for text rendered with Pango,
+MarkupText
+, which can be formatted with an HTML-like syntax (
+#855
+)
+Added Fading in and out examples and deprecation of
+FadeInFromDown
+and
+FadeOutAndShiftDown
+(
+#827
+)
+Added example for
+MoveAlongPath
+to the docs (
+#873
+)
+Added ambient rotate for other angles - theta, phi, gamma (
+#660
+)
+Use custom bindings for Pango (
+#878
+)
+Added
+Graph
+, a basic implementation for (graph theory) graphs (
+#861
+)
+Allow for chaining methods when using the new
+.animate
+syntax in
+play()
+(
+#889
+)
+Bugfixes
+¶
+Fix doctests in .rst files (
+#797
+)
+Fix failing doctest after adding
+manim
+plugin
+subcommand (
+#831
+)
+Normalize the direction vector in
+always_shift()
+(
+#839
+)
+Add
+disable_ligatures
+to
+Text
+(via
+#804
+)
+Make scene caching aware of order of Mobjects (
+#845
+)
+Fix
+CairoText
+to work with new config structure (
+#858
+)
+Added missing argument to classes inheriting from
+Matrix
+(
+#859
+)
+Fixed:
+z_index
+of mobjects contained in others as submobjects is now properly respected (
+#872
+)
+Let
+set_fill_by_checkboard()
+return the modified surface to allow method chaining (
+#883
+)
+Mobjects added during an updater are added to
+Scene.moving_mobjects
+(
+#838
+)
+Pass background color to JS renderer (
+#876
+)
+Small fixes to docstrings. Tiny cleanups. Remove
+digest_mobject_attrs
+. (
+#834
+)
+Added closed shape detection in
+DashedVMobject
+in order to achieve an even dash pattern (
+#884
+)
+Fix Spelling in docstrings and variables across the library (
+#890
+)
+Other changes
+¶
+Change library name to manim (
+#811
+)
+Docker: use local files when building an image (
+#803
+)
+Let ffmpeg render partial movie files directly instead of temp files (
+#817
+)
+manimce
+to
+manim
+& capitalizing Manim in readme (
+#794
+)
+Added flowchart for different docstring categories (
+#828
+)
+Improve example in module docstring of
+creation
++ explicitly document buff parameter in
+arrange()
+(
+#825
+)
+Disable CI pipeline for Python 3.6 (
+#823
+)
+Update URLs in docs (
+#832
+)
+Move upcoming changelog to GitHub-wiki (
+#822
+)
+Change badges in readme (
+#854
+)
+Exclude generated gRPC files from source control (
+#868
+)
+Added linguist-generated attribute to
+.gitattributes
+(
+#877
+)
+Cleanup: removed inheritance from
+object
+for some classes, refactor some imports (
+#795
+)
+Change several
+str.format()
+to
+f
+-strings (
+#867
+)
+Update javascript renderer (
+#830
+)
+Bump version number to 0.2.0, update changelog (
+#894
+)

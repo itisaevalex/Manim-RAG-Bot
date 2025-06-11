@@ -1,0 +1,273 @@
+Source: https://docs.manim.community/en/stable/changelog.html
+
+Changelog
+¶
+This page contains a list of changes made between releases. Changes
+from versions that are not listed below (in particular patch-level
+releases since v0.18.0) are documented on our
+GitHub release page
+.
+v0.19.0
+Major Changes
+Contributors
+Pull requests merged
+Highlights
+Breaking changes
+New features
+Enhancements
+Optimizations
+Fixed bugs
+Documentation-related changes
+Type Hints
+Internal Improvements and Automation
+Dependencies
+v0.18.0
+Contributors
+Pull requests merged
+Breaking changes
+Highlights
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Code quality improvements and similar refactors
+New releases
+v0.17.3
+Contributors
+Pull requests merged
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Code quality improvements and similar refactors
+New releases
+v0.17.2
+Contributors
+Pull requests merged
+Fixed bugs
+Documentation-related changes
+Code quality improvements and similar refactors
+New releases
+v0.17.1
+Contributors
+Pull requests merged
+Fixed bugs
+Documentation-related changes
+Code quality improvements and similar refactors
+New releases
+v0.17.0
+Contributors
+Pull requests merged
+Breaking changes
+Highlights
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.16.0
+Contributors
+Pull requests merged
+Highlights
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.15.2
+Contributors
+Pull requests merged
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.15.1
+Contributors
+Pull requests merged
+Enhancements
+Fixed bugs
+Documentation-related changes
+Code quality improvements and similar refactors
+New releases
+v0.15.0
+Contributors
+Pull requests merged
+Breaking changes
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.14.0
+Contributors
+Pull requests merged
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Code quality improvements and similar refactors
+New releases
+v0.13.1
+Contributors
+Pull requests merged
+Fixed bugs
+New releases
+v0.13.0
+Contributors
+Pull requests merged
+Highlights
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Code quality improvements and similar refactors
+New releases
+Unclassified changes
+v0.12.0
+Contributors
+Pull requests merged
+Highlights
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.11.0
+Contributors
+Pull requests merged
+Breaking changes
+Highlights
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.10.0
+Contributors
+Pull requests merged
+Breaking changes
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.9.0
+Contributors
+Pull requests merged
+Highlights
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.8.0
+Contributors
+Pull requests merged
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.7.0
+Contributors
+Pull requests merged
+Breaking changes
+Highlights
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+Changes that needed to be reverted again
+New releases
+v0.6.0
+Contributors
+Pull requests merged
+Breaking changes
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+New releases
+v0.5.0
+Contributors
+Pull requests merged
+Highlights
+Deprecated classes and functions
+New features
+Enhancements
+Fixed bugs
+Documentation-related changes
+Changes concerning the testing system
+Changes to our development infrastructure
+Code quality improvements and similar refactors
+v0.4.0
+Breaking Changes
+New Features
+Bugfixes and Enhancements
+v0.3.0
+New Features
+Bugfixes and Enhancements
+v0.2.0
+Breaking Changes
+New Features
+Bugfixes
+Other changes
+v0.1.1
+Plugins
+Fixes
+Configuration
+Documentation
+Mobjects, Scenes, and Animations
+v0.1.0
+New Features
+Command line
+Config system
+Mobjects, Scenes, and Animations
+Documentation
+Fixes
+Of interest to developers
+Other Changes

@@ -1,0 +1,14 @@
+Source: https://docs.manim.community/en/stable/reference/manim.mobject.geometry.labeled.html
+
+labeled
+¶
+Mobjects that inherit from lines and contain a label along the length.
+Classes
+Label
+A Label consisting of text surrounded by a frame.
+LabeledArrow
+Constructs an arrow containing a label box somewhere along its length.
+LabeledLine
+Constructs a line containing a label box somewhere along its length.
+LabeledPolygram
+Constructs a polygram containing a label box at its pole of inaccessibility.

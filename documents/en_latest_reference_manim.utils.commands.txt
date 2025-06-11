@@ -1,0 +1,76 @@
+Source: https://docs.manim.community/en/latest/reference/manim.utils.commands.html
+
+commands
+¶
+Classes
+VideoMetadata
+Functions
+capture
+(
+command
+,
+cwd
+=
+None
+,
+command_input
+=
+None
+)
+[source]
+¶
+Parameters
+:
+command
+(
+str
+)
+cwd
+(
+StrOrBytesPath
+|
+None
+)
+command_input
+(
+str
+|
+None
+)
+Return type
+:
+tuple[str, str, int]
+get_dir_layout
+(
+dirpath
+)
+[source]
+¶
+Get list of paths relative to dirpath of all files in dir and subdirs recursively.
+Parameters
+:
+dirpath
+(
+Path
+)
+Return type
+:
+Generator
+[str, None, None]
+get_video_metadata
+(
+path_to_video
+)
+[source]
+¶
+Parameters
+:
+path_to_video
+(
+str
+|
+PathLike
+)
+Return type
+:
+VideoMetadata

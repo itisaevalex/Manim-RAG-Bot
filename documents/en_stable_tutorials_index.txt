@@ -1,0 +1,27 @@
+Source: https://docs.manim.community/en/stable/tutorials/index.html
+
+Tutorials
+¶
+Table of Contents
+Quickstart
+Overview
+Starting a new project
+Animating a circle
+Transforming a square into a circle
+Positioning
+Mobject
+s
+Using
+.animate
+syntax to animate methods
+Transform
+vs
+ReplacementTransform
+Manim’s Output Settings
+Manim output folders
+Sections
+Some command line flags
+Manim’s building blocks
+Mobjects
+Animations
+Scenes

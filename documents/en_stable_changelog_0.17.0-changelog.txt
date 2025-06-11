@@ -1,0 +1,325 @@
+Source: https://docs.manim.community/en/stable/changelog/0.17.0-changelog.html
+
+v0.17.0
+¶
+Date
+:
+December 02, 2022
+Contributors
+¶
+A total of 32 people contributed to this
+release. People with a ‘+’ by their names authored a patch for the first
+time.
+Alex Lembcke
+Alexander Vázquez
+Benjamin Hackl
+Duc Phat +
+Hugues Devimeux
+Ievgen Pyrogov +
+Isaac Beh +
+Jeff Hanke +
+John Hammond +
+Jérome Eertmans +
+Kevin Lubick
+Kian-Meng Ang +
+Naveen M K
+Nick Skriloff +
+NotWearingPants
+Onur Solmaz +
+OpenRefactory, Inc +
+Owen Samuel +
+Pavel Zwerschke +
+Sparsh Goenka
+Taxo Rubio
+ad-chaos +
+fcrozatier
+mostly documentation +
+vahndi +
+The patches included in this release have been reviewed by
+the following contributors.
+Benjamin Hackl
+Darylgolden
+Hugues Devimeux
+Jan-Hendrik Müller
+Kevin Lubick
+Mohammed Belgoumri
+Naveen M K
+NotWearingPants
+Raghav Goel
+Sparsh Goenka
+Tristan Schulz
+ad-chaos
+friedkeenan
+Pull requests merged
+¶
+A total of 63 pull requests were merged for this release.
+Breaking changes
+¶
+#2898
+: Ported improved implementation of
+SVGMobject
+from 3b1b/manim
+The implementation of
+SVGMobject
+is completely changed in this release.
+Manim now uses the Python library
+svgelements
+to parse SVGs, instead of trying
+to do it itself. The former class for SVG path objects,
+SVGPathMobject
+has been
+replaced (without deprecation) with
+VMobjectFromSVGPath
+.
+If you need to create a mobject from an SVG path string, you can do so via:
+import
+svgelements
+as
+se
+my_path_mobject
+=
+VMobjectFromSVGPath
+(
+se
+.
+Path
+(
+my_path_string
+))
+The unused class
+TexSymbol
+has been removed. The modules
+manim.mobject.svg.svg_path
+and
+manim.mobject.svg.style_utils
+became
+superfluous due to the rework and have been removed.
+#3030
+: Added support for Python 3.11, dropped support for Python 3.7
+Highlights
+¶
+#3049
+: Added thematic guide for the
+manim-voiceover
+plugin
+This new
+thematic guide
+provides a brief
+introduction to
+manim-voiceover
+, a plugin that helps to add voiceovers
+to your manimations. Supports both working with your own voice as well as
+synthetically generated voices.
+New features
+¶
+#2883
+: Added animation
+RemoveTextLetterByLetter
+#3016
+: Implemented
+LineJointTypes
+for both Cairo and OpenGL renderer
+#3017
+: Replaced renderer strings with
+RendererType
+enum entries
+Enhancements
+¶
+#2927
+: Allowed
+networkx
+to return 3D layouts when passing
+dim=3
+in the
+layout_config
+of a
+Graph
+#3014
+: Enabled code completion for
+Mobject.animate()
+for some IDEs
+Uses a Union of the existing Generic
+Mobject
+Type
+T
+and
+_Animation Builder
+as the declared return type from
+Mobject.animate
+to improve code completion.
+Fixed bugs
+¶
+#2846
+: Prevent
+TransformMatchingTex
+from crashing when there is nothing to fade
+#2885
+: Always expand user when validating file-paths
+#2888
+: Fixed bug with propagation of
+tex_template
+value when using
+tempconfig
+#2895
+: Fixed broken
+ShowPassingFlashWithThinningStrokeWidth
+#2920
+: Fixed alignment of faded lines when passing
+faded_line_ratio
+to
+NumberPlane
+#2977
+: Allow rendering of empty text strings
+#2992
+: Fixed
+CLI.tex_template_file
+config file setting
+#3003
+: Fixed setting
+run_time
+of
+Succession
+after creating the animation object
+#3019
+: Fixed rendering SVG paths with multiple move commands
+Documentation-related changes
+¶
+#2881
+: Fixed small typo in deep dive guide
+#2886
+: Added docstring to and fixed type hint of
+get_winding_number()
+#2892
+: Corrected error in the
+PolygonOnAxes
+example
+#2903
+: Fixed minor grammar issues in
+FAQ: General Usage
+#2904
+: Fixed formatting and grammar issues in
+Manim Development Process
+#2911
+: Disabled autoplay for
+SoundExample
+in documentation
+#2914
+: Added conda installation instructions
+#2915
+: Added documentation to
+three_dimensions
+#2919
+: Corrected parameters and enhanced the description of
+ImageMobject.interpolate_color()
+#2932
+: Fixed whitespace formatting issue
+#2933
+: Improved answer to the “no scenes in this module” error
+#2936
+: Added installation instructions for Windows via
+winget
+#2962
+: Disabled “Edit on GitHub” button in documentation
+#2978
+: Added documentation and example for
+CyclicReplace
+#3001
+: Added FAQ entry regarding failed
+manimpango
+build
+#3004
+: Fixed docbuild warnings
+#3018
+: Follow-up to
+#2988
+– fixes and improvements to some docstrings
+#3022
+: Corrected type hint in
+Axes.coords_to_point()
+#3035
+: Include latex install instructions on ubuntu
+#3044
+: Added Debian dependencies required for pycairo and manimpango
+Changes concerning the testing system
+¶
+#2893
+: Improved performance of
+test_threed.py
+#2981
+: Implemented fallback save behavior for
+pytest
+--show_diff
+#2982
+: Rewrote unstable tests for
+text_mobject
+to be non-graphical
+#2991
+: Migrated
+os.path
+to
+pathlib.Path
+in tests
+#3053
+: Added threshold for pixel value errors in frame comparison tests
+Changes to our development infrastructure
+¶
+#2925
+: CI (test-arm): Updated python version to
+3.10.6
+#2963
+: CI (test-arm): Always select the correct python version
+#3029
+: CI: Updated actions version and added dependabot config
+#3045
+: Updated python-opengl -> python3-opengl for Ubuntu CI task
+Code quality improvements and similar refactors
+¶
+#2872
+: Add
+extract_frames.py
+utility script to help visualize test control data
+#2877
+: Fixed binder launch problem by adding missing optional
+notebook
+dependency
+#2887
+: Removed empty i18n files that caused filename clashes
+#2931
+: Updated
+mapbox-earcut
+#2938
+: Suggested fixes by iCR, OpenRefactory, Inc.
+#2954
+: Fixed click version string in
+pyproject.toml
+#2958
+: Fix missing stub packages for mypy
+#2975
+: Fixed broken links in README
+#2980
+: Migrate more
+os.path
+to
+pathlib.Path
+#2983
+: Fixed Windows CI Pipeline
+#2988
+: Converted all types of parameters in docstrings to proper type annotations
+#2994
+: Fixed segmentation faults from doctests under Python 3.10
+#2995
+: Added encoding to
+open
+in
+utils.text_file_writing
+#3032
+: Bump jupyter-core from 4.11.1 to 4.11.2
+#3033
+: Bump pillow from 9.2.0 to 9.3.0
+#3054
+: Removed unused
+GraphicalUnitTester
+New releases
+¶
+#3023
+: Prepared new release: v0.17.0

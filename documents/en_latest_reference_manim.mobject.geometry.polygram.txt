@@ -1,0 +1,34 @@
+Source: https://docs.manim.community/en/latest/reference/manim.mobject.geometry.polygram.html
+
+polygram
+¶
+Mobjects that are simple geometric shapes.
+Classes
+ConvexHull
+Constructs a convex hull for a set of points in no particular order.
+Cutout
+A shape with smaller cutouts.
+Polygon
+A shape consisting of one closed loop of vertices.
+Polygram
+A generalized
+Polygon
+, allowing for disconnected sets of edges.
+Rectangle
+A quadrilateral with two sets of parallel sides.
+RegularPolygon
+An n-sided regular
+Polygon
+.
+RegularPolygram
+A
+Polygram
+with regularly spaced vertices.
+RoundedRectangle
+A rectangle with rounded corners.
+Square
+A rectangle with equal side lengths.
+Star
+A regular polygram without the intersecting lines.
+Triangle
+An equilateral triangle.

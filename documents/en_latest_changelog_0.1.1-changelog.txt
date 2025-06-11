@@ -1,0 +1,145 @@
+Source: https://docs.manim.community/en/latest/changelog/0.1.1-changelog.html
+
+v0.1.1
+¶
+Date
+:
+December 1, 2020
+Changes since Manim Community release v0.1.0
+Plugins
+¶
+Provided a standardized method for plugin discoverability, creation,
+installation, and usage. See the
+documentation
+.
+Fixes
+¶
+JsRender is optional to install. (via
+#697
+).
+Allow importing modules from the same directory as the input
+file when using
+manim
+from the command line (via
+#724
+).
+Remove some unnecessary or unpythonic methods from
+Scene
+(
+get_mobjects
+,
+add_mobjects_among
+,
+get_mobject_copies
+),
+via
+#758
+.
+Fix formatting of
+Code
+(via
+#798
+).
+Configuration
+¶
+Removed the
+skip_animations
+config option and added the
+Renderer.skip_animations
+attribute instead (via
+#696
+).
+The global
+config
+dict has been replaced by a global
+config
+instance
+of the new class
+ManimConfig
+. This class has a dict-like API, so
+this should not break user code, only make it more robust. See the
+Configuration tutorial for details.
+Added the option to configure a directory for external assets (via
+#649
+).
+Documentation
+¶
+Add
+:issue:
+and
+:pr:
+directives for simplifying linking to issues and
+pull requests on GitHub (via
+#685
+).
+Add a
+skip-manim
+tag for skipping the
+..
+manim::
+directive when
+building the documentation locally (via
+#796
+).
+Mobjects, Scenes, and Animations
+¶
+The
+alignment
+attribute to Tex and MathTex has been removed in favour of
+tex_environment
+.
+Text
+now uses Pango for rendering.
+PangoText
+has been removed. The old implementation is still available as a fallback as
+CairoText
+.
+Variations of
+Dot
+have been added as
+AnnotationDot
+(a bigger dot with bolder stroke) and
+LabeledDot
+(a dot containing a
+label).
+Scene.set_variables_as_attrs has been removed (via
+#692
+).
+Ensure that the axes for graphs (
+GraphScene
+) always intersect (
+#580
+).
+Now Mobject.add_updater does not call the newly-added updater by default
+(use
+call_updater=True
+instead) (via
+#710
+)
+VMobject now has methods to determine and change the direction of the points (via
+#647
+).
+Added BraceBetweenPoints (via
+#693
+).
+Added ArcPolygon and ArcPolygonFromArcs (via
+#707
+).
+Added Cutout (via
+#760
+).
+Added Mobject raise not implemented errors for dunder methods and implementations for VGroup dunder methods (via
+#790
+).
+Added
+ManimBanner
+for a animated version of our logo and banner (via
+#729
+)
+The background color of a scene can now be changed reliably by setting, e.g.,
+self.camera.background_color
+=
+RED
+(via
+#716
+).

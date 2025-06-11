@@ -1,0 +1,94 @@
+Source: https://docs.manim.community/en/stable/contributing/docs/admonitions.html
+
+Adding Admonitions
+¶
+Adding Blocks for Tip, Note, Important etc. (Admonitions)
+¶
+The following directives are called Admonitions. You
+can use them to point out additional or important
+information. Here are some examples:
+See also
+¶
+..
+seealso
+::
+Some ideas at
+:mod:
+`~.tex_mobject`
+,
+:class:
+`~.Mobject`
+,
+:meth:
+`~.Mobject.add_updater`
+,
+:attr:
+`~.Mobject.depth`
+,
+:func:
+`~.make_config_parser`
+See also
+Some ideas at
+tex_mobject
+,
+Mobject
+,
+add_updater()
+,
+depth
+,
+make_config_parser()
+Note
+¶
+..
+note
+::
+A note
+Note
+A note
+Tip
+¶
+..
+tip
+::
+A tip
+Tip
+A tip
+You may also use the admonition
+hint
+, but this is very similar
+and
+tip
+is more commonly used in the documentation.
+Important
+¶
+..
+important
+::
+Some important information which should be considered.
+Important
+Some important information which should be considered.
+Warning
+¶
+..
+warning
+::
+Some text pointing out something that people should be warned about.
+Warning
+Some text pointing out something that people should be warned about.
+You may also use the admonitions
+caution
+or even
+danger
+if the
+severity of the warning must be stressed.
+Attention
+¶
+..
+attention
+::
+A attention
+Attention
+A attention
+You can find further information about Admonitions here:
+https://pradyunsg.me/furo/reference/admonitions/

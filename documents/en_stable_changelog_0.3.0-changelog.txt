@@ -1,0 +1,164 @@
+Source: https://docs.manim.community/en/stable/changelog/0.3.0-changelog.html
+
+v0.3.0
+¶
+Date
+:
+February 1, 2021
+The changes since Manim Community release v0.2.0 are listed below.
+New Features
+¶
+#945
+:
+change_layout()
+method for
+Graph
+mobject
+#943
+: IPython %%manim magic
+#970
+: Added
+--version
+command line flag
+#948
+: Allow passing a code string to
+Code
+#917
+: Allow overriding new-style method animations
+#756
+: Allow setting frame_height and frame_width via config file
+#939
+: Added custom font files support
+#892
+: Added ManimCommunity colors
+#922
+: Tree layout for Graph mobject
+#935
+: Added code of conduct
+#916
+: Multi-column layout for partite graphs
+#742
+: Units: Pixels, Munits, Percent in
+unit
+#893
+: Convenience method
+from_networkx()
+for creating a graph from a networkx graph
+Bugfixes and Enhancements
+¶
+#988
+: Fix Windows CI pipeline by adding missing LaTeX package
+#961
+: Added typings and docs for vectorized mobjects and bezier related functions
+#977
+: JupyterLab docker image and documentation for manim and IPython
+#985
+: Fix variable name for webgl renderer
+#954
+: Fix edges lagging behind vertices in animations of graphs
+#980
+: Allow usage of custom Pygments styles in Code
+#952
+: Allow passing tween information to the WebGL frontend
+#978
+: Fix
+possible_paths
+not printing in
+code_mobject
+#976
+: Update
+ManimPango
+#967
+: Automatically import plugins
+#971
+: Make ManimCommunity look consistent
+#957
+: Raise
+NotImplementedError
+when trying to chain overridden method animations
+#947
+: Several fixes and improvements for
+PointCloundDot
+#923
+: Documentation: move installation instructions for developers to page for developers
+#964
+: Added unit test for
+NumberLine
+’s unit vector
+#960
+: Magnitude of
+NumberLine
+’s unit vector should be
+unit_size
+, not 1
+#958
+: Fix code formatting in
+utils/debug.py
+#953
+: Update license year
+#944
+: Interpolate stroke opacity in
+FadeIn
+and update
+stroke_opacity
+and
+fill_opacity
+in
+set_stroke()
+and
+set_fill()
+#865
+: Rename
+get_submobject_index_labels
+to
+index_labels
+#941
+: Added keyword arguments
+x_min
+,
+x_max
+,
+y_min
+,
+y_max
+to
+ThreeDAxes
+#886
+: Let the render progress bar show details about the rendered animation again
+#936
+: Fix
+BulletedList
+TeX environment problem and add a typing to
+get_module
+#938
+: Remove dependency on progressbar
+#937
+: Change ‘brew cask install’ to ‘brew install –cask’ for CI pipeline
+#933
+: Make matrix work with lists again
+#932
+: Correctly parse
+log_dir
+option
+#920
+: Raise error if markup in
+MarkupText
+is invalid
+#929
+: Raise an error if a
+Matrix
+object is created with < 2-dimensional input
+#907
+: Make Scene.add_sound work again (when running with
+--disable_caching
+)
+#906
+: Allow new-style method animation to be used in animation groups
+#908
+: Removed deprecated command line arguments from documentation
+#903
+: Tiny grammar improvements
+#904
+: Added blank line between imports and class example
+#898
+: CI: fix publish workflow
