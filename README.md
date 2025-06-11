@@ -82,6 +82,11 @@ RAG Portion/
 
 4. **Generate Embeddings** (if not already done)
    ```bash
+   python scripts/setup_database.py
+   ```
+   
+   *Or manually:*
+   ```bash
    python src/embedding_db.py
    ```
 
